@@ -1,0 +1,81 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+/* preload */
+
+/* configuracion preload */
+.preload{
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000 ;
+    position: fixed;
+    top: 0rem;
+    left: 0px;
+    z-index: 90000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* clase que crea js para que se cierra */
+
+.cerrar{
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+
+.preload__img video{
+    width:50vw;
+    height: 50vh;
+}
+
+
+.ball{
+    width: 100vw;
+    height: 100vh;
+    position:absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
+    background-color: #000000 ;
+    opacity:0;
+    z-index: 10000;
+
+}
+
+
+
+.container__text{
+    font-size: 6rem;
+    font-family: fantasy;
+    font-weight: 900;
+    letter-spacing: 5px;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: rgb(0, 255, 55);
+    opacity:0;
+
+}
+
+.container{
+    background-color: #000314;
+    width: 100%;
+    height: 100vh;
+} 
