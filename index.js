@@ -12,26 +12,25 @@
  
 
     gsap.to(".ball",{        
-        duration: 4,            
-        delay:9,
+        duration: 5,            
+        delay:8.7,
         opacity:3,
         'webkitFilter': 'blur(2rem)',
         scale:0.1,       
     })
 
-    gsap.to(".container__text",{        
-        duration: 1,            
-        delay:3,
-        opacity:3,
-    })
 
     gsap.to(".preload__img",{        
-        duration: 2,            
-        delay:9,
+        duration: 5,            
+        delay:9.5,
         opacity:0,
     })
 
 
-
+    gsap.to(".container__text",{        
+        duration: 5,            
+        delay:9.9,
+        opacity:3,
+    })
 
 })();
