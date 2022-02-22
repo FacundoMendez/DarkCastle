@@ -9,7 +9,9 @@ html{
     font-family: 'Roboto', sans-serif;
 }
 
-
+main{
+    overflow: hidden;
+}
 
 /* preload */
 
@@ -36,9 +38,10 @@ html{
 }
 
 
-.preload__img video{
-    width:50vw;
-    height: 50vh;
+.preload__video video{
+    width:100vw;
+    height: 100vh;
+    object-fit: cover;
 }
 
 
@@ -53,29 +56,72 @@ html{
     background-color: #000000 ;
     opacity:0;
     z-index: 10000;
-
 }
 
-
-
-.container__text{
-    font-size: 6rem;
-    font-family: fantasy;
-    font-weight: 900;
-    letter-spacing: 5px;
-    width: 100%;
-    text-align: center;
+.skip p{
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    color: rgb(0, 255, 55);
-    opacity:0;
+    z-index: 5000;
+    color: rgb(42, 253, 0);
+    font-size: 3.5rem;
+    bottom: 5%;
+    right: 6%;
+    cursor: pointer;
+    font-family: fantasy;
+    letter-spacing: 1px ;
+    text-transform: uppercase;
+    user-select: none;
+    display: none;
+    opacity: 0;
+}
+
+.skip p:active{
+    font-size: 3.2rem;
+}
+
+
+/* rayo preload */
+
+.skip__video{
+    position: absolute;
+    display: inline-block;
+    overflow: hidden;
+    width:100%;
+    background-color: #000000;
 
 }
+
+.video__skip-rayo{
+    width:100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 7001;
+}
+
+
+/* container */
 
 .container{
-    background-color: #000314;
-    width: 100%;
+    position: relative;
+    background: #000000;
+    width: 100vw;
     height: 100vh;
-} 
+    z-index: 6000;
+    opacity: 0;
+}
+
+
+.container video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* container2 */
+
+.container2{
+    position: relative;
+    background-color: #000000;
+    width: 100vw;
+    height: 100vh;
+}
