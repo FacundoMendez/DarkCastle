@@ -12,25 +12,25 @@
 
 
  (() =>{
+
+    let tl = gsap.timeline({
+        delay:19,
+    });
+
+    tl.to(".preload__video",{   
+        opacity:0,
+    })
  
-    gsap.to(".ball",{        
-        duration: 4,            
-        delay:19.7,
-        opacity:1,
+    tl.to(".ball",{        
+        opacity:3,
+        backgrondColor:"black",
         'webkitFilter': 'blur(2rem)',
         scale:.1,       
     })
 
-    gsap.to(".preload__video",{        
-        duration: 4,            
-        delay:20,
-        opacity:0,
-    })
 
-    gsap.to(".container",{        
-        duration: 3,            
-        delay:20.05,
-        opacity:1,
+    tl.to(".container",{        
+        opacity:3,
     })
 
 
