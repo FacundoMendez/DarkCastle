@@ -1,23 +1,11 @@
+ (() =>{
 
-
-
-(() =>{
     let preload = document.querySelector(".preload");  
     setTimeout(function(){
         preload.classList.add("cerrar");
         preload.style.zIndex=0;
     },20000)
-    
-})();
 
-
-/* (() =>{
-
-    
-})(); */
-
-
- (() =>{
 
     let tl = gsap.timeline({
         delay:19,
@@ -29,7 +17,6 @@
  
     tl.to(".ball",{ 
         opacity:3,
-        backgrondColor:"black",
         'webkitFilter': 'blur(2rem)',
         scale:.1,       
     })
@@ -72,4 +59,34 @@
     }
 
     videoSkip()
+})();
+
+
+(() =>{
+  let preload = document.querySelector(".preload__movile");  
+  setTimeout(function(){
+      preload.classList.add("cerrar");
+      preload.style.zIndex=0;
+  },10000)
+
+
+  let tl = gsap.timeline({
+      delay:9,
+  });
+
+  tl.to(".preload__video-movile",{   
+      opacity:0,
+  })
+
+  tl.to(".ball__movile",{ 
+      opacity:3,
+      'webkitFilter': 'blur(2rem)',
+      scale: 30,       
+  })
+
+  tl.to(".container",{ 
+      duration:1,       
+      opacity:1,
+  })
+
 })();
