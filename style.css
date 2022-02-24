@@ -43,7 +43,7 @@ body{
     transition: all 0.5s;
 }
 
-.video__animated-preload-movil{
+.preload__movile{
     display: none;
 }
 

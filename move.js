@@ -65,7 +65,7 @@
 (() =>{
   let preload = document.querySelector(".preload__movile");  
   setTimeout(function(){
-      preload.classList.add("cerrar");
+      preload.classList.add("cerrar__movile");
       preload.style.zIndex=0;
   },10000)
 
