@@ -8,17 +8,19 @@
 
 
     let tl = gsap.timeline({
-        delay:19,
+        delay:18,
     });
 
-    tl.to(".preload__video",{   
+    tl.to(".preload__video",{  
+        duration:1, 
         opacity:0,
     })
  
-    tl.to(".ball",{ 
+    tl.to(".ball",{
+        duration:1, 
         opacity:3,
         'webkitFilter': 'blur(2rem)',
-        scale:.1,       
+        scale:10,       
     })
 
     tl.to(".container",{ 
@@ -28,7 +30,7 @@
 
 
     gsap.to(".skip p",{        
-        delay:11,
+        /* delay:11, */
         display: "inline-block",
         opacity: 1,
     })
@@ -89,4 +91,27 @@
       opacity:1,
   })
 
+})();
+
+(() =>{
+
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    let tl = gsap.timeline({
+        duration:10,
+    });
+
+    tl.to(".container3__pasillo", {
+        scale:"-=.93",
+        scrollTrigger:{
+            trigger: ".container3",
+            pin: true,
+            scrub: 2.5,
+            end: "+=300%"
+        }
+    })
+
+ 
+    
 })();

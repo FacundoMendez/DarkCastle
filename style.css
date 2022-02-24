@@ -8,16 +8,43 @@
 html{
     font-size: 62.5%;
     font-family: 'Roboto', sans-serif;
+    scroll-behavior:smooth;
 }
 
 main{
     overflow: hidden;
 }
 
-body{
-    overflow-x: hidden;
-    overflow-y: scroll;
+
+/* barra de scroll */
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background-color: rgb(0, 0, 0);
 }
+::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+}
+::-webkit-scrollbar-thumb {
+    background:rgba(165, 255, 117, 0.911);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(93, 253, 61);
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+
+
 
 /* preload */
 
@@ -119,7 +146,9 @@ body{
     opacity: 0;
 }
 
-
+.img__animated-preload-movil{
+    display: none;
+}
 .container video{
     width: 100%;
     height: 100%;
@@ -140,6 +169,51 @@ body{
     color: wheat;
     padding-top: 50rem;
 }
+
+
+/* container 3 */
+
+.container3{
+    position: relative;
+    background-color: #000000;
+    width: 100vw;
+    height: 100vh;
+    font-size: 6rem;
+    text-align: center;
+    color: wheat;
+    overflow: hidden;
+}
+
+.container3__pasillo{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 5000; 
+}
+
+.container3__pasillo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(17)
+}
+
+
+
+
+/* container 4 */
+
+.container4{
+    position: relative;
+    background-color: #000000;
+    width: 100vw;
+    height: 100vh;
+    font-size: 6rem;
+    text-align: center;
+    color: wheat;
+    padding-top: 50rem;
+}
+
 
 
 
@@ -200,5 +274,22 @@ body{
         display: inline-block;
         opacity: 0;
         transition: all 0.5s;
+    }
+
+    /* container1 */
+
+    .container video{
+        display: none;
+    }
+    .container img{
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: contrast(108%);
+    }
+
+    .container3__pasillo{
+        display: none;
     }
 }
