@@ -100,18 +100,30 @@
 
     let tl = gsap.timeline({
         duration:10,
+        delay:1,
     });
 
+
     tl.to(".container3__pasillo", {
-        scale:"-=.93",
+        scale:"-=7.3",
+        duration:3,
         scrollTrigger:{
             trigger: ".container3",
             pin: true,
-            scrub: 2.5,
-            end: "+=300%"
+            scrub: 2,
+            end: "+=360%"
         }
     })
 
- 
+    tl.to(".container3__tesoro", {
+        opacity:11,
+        scale:"-=35",
+        scrollTrigger:{
+            trigger: ".container3__pasillo",
+            pin: true,
+            scrub: 2,
+        }
+    })
+
     
 })();

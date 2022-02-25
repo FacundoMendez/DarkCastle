@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+
+    <script defer src="./index.js"></script>
+    <script defer src="./move.js"></script>
+
     <link rel="stylesheet" href="style.css">
     <title>DARK CASTLE </title>
 </head>
@@ -25,51 +33,48 @@
 
     <div class="preload__movile">
         <div class="preload__video-movile">
-            <video class="video__animated-preload-movil" src="./src/logo.mp4" loop muted autoplay
+            <video class="video__animated-preload-movil" src="./src/logo.mp4" loop muted autoplay 
                 type="video/mp4"></video>
             <div class="ball__movile"></div>
         </div>
     </div>
 
+    <div class="container">
+        <video class="container__background" src="./src/backgroundPrincipal.mp4" loop muted autoplay 
+            type="video/mp4"></video>
+        <img class="img__animated-preload-movil" src="./src/backgroundPrincipal-movile.png" alt="Background DarkCastle">
+    
+    </div>
 
-
-    <main>
-        <div class="container">
-            <video class="container__background" src="./src/backgroundPrincipal2.mp4" loop muted autoplay
-                type="video/mp4"></video>
-            <img class="img__animated-preload-movil" src="./src/backgroundPrincipal-movile.png" alt="Background DarkCastle">
-        
-        </div>
-
-
+    <main class="main">
 
         <div class=" container2">
             <p>container 2</p>
         </div>
+
+
         <div class="container3">
-            <p>container 3 </p>
-            <div class="container3__pasillo">
-                <img src="./src/pasilloCastle.png" alt="Pasillo castillo">
+            <div class="container3__pasillo"></div>
+
+            <div class="container3__tesoro">
+                <img  src="./src/backgroundTesoro.png" alt="Pasillo castillo">
             </div>
+            
         </div>
-        <div class="container4">
-            <p>container 4</p>
-        </div>
+        
+    <!--     <div class="container4">
+               <div class="container4__tesoro">
+                <img src="./src/backgroundTesoro.png" alt="Pasillo castillo">
+            </div> 
+        </div> -->
 
         <!--       <div class="container5">
             <p>container 5</p>
         </div> -->
     </main>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js'></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"
-        integrity="sha512-5efjkDjhldlK+BrHauVYJpbjKrtNemLZksZWxd6Wdxvm06dceqWGLLNjZywOkvW7BF032ktHRMUOarbK9d60bg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="./index.js"></script>
-    <script src="./move.js"></script>
+
+ 
+
 </body>
 
 </html>

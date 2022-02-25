@@ -5,7 +5,7 @@ let videoRayo = document.querySelector(".skip__video")
 function videoSkip(){
     skip.addEventListener("click", function(){
         video.style.display= "none"
-        videoRayo.innerHTML = `<video class="video__skip-rayo" src="./src/Rayo.mp4"  muted autoplay type="video/mp4"></video>`
+        videoRayo.innerHTML = `<video class="video__skip-rayo" src="./src/Rayo.mp4" autobuffer="" muted autoplay type="video/mp4"></video>`
     });
 }
 
