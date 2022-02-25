@@ -94,13 +94,63 @@
 })();
 
 (() =>{
+    gsap.registerPlugin(ScrollTrigger);
 
 
+
+    gsap.set(".container3__pasillo",{
+        opacity:1,
+        scale:8.2
+    }),
+
+    gsap.set(".container3__tesoro",{
+        opacity:0,
+        scale:30
+    }),
+
+
+    gsap.timeline({
+        scrollTrigger:{
+            trigger:".container3",
+            pin:".container3",
+            scrub:true,
+            end:"+300%"
+        }
+    })
+
+
+    .to(".container3__pasillo",{
+        duration:5,
+        scale:"-=6.8",
+
+    })
+    .to(".container3__pasillo",{
+        webkitFilter:"blur(5px)"
+    })
+
+
+
+    .to(".container3__tesoro",{
+        duration:3,
+        scale:1,
+        opacity:1
+    })
+
+ /*    .to(".container3__tesoro",{
+        webkitFilter:"blur(5px)"
+    })
+ */
+
+})();
+
+
+
+/* 
     gsap.registerPlugin(ScrollTrigger);
 
     let tl = gsap.timeline({
-        duration:10,
-        delay:1,
+        duration:5,
+        delay:3,
     });
 
 
@@ -111,19 +161,20 @@
             trigger: ".container3",
             pin: true,
             scrub: 2,
-            end: "+=360%"
+            end: "+=350%"
         }
     })
 
     tl.to(".container3__tesoro", {
-        opacity:11,
-        scale:"-=35",
+        delay:3,
+        scale:"-=.9",
         scrollTrigger:{
             trigger: ".container3__pasillo",
             pin: true,
-            scrub: 2,
+            scrub: 1,
         }
     })
-
+ */
     
-})();
+    
+    
