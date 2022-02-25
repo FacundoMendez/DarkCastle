@@ -96,8 +96,6 @@
 (() =>{
     gsap.registerPlugin(ScrollTrigger);
 
-
-
     gsap.set(".container3__pasillo",{
         opacity:1,
         scale:8.2
@@ -113,11 +111,10 @@
         scrollTrigger:{
             trigger:".container3",
             pin:".container3",
-            scrub:true,
+            scrub:2,
             end:"+300%"
         }
     })
-
 
     .to(".container3__pasillo",{
         duration:5,
@@ -127,8 +124,6 @@
     .to(".container3__pasillo",{
         webkitFilter:"blur(5px)"
     })
-
-
 
     .to(".container3__tesoro",{
         duration:3,
