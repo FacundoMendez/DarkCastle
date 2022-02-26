@@ -106,31 +106,61 @@
         scale:30
     }),
 
+    gsap.set(".container3__ojos",{
+        opacity:0,
+        webkitFilter:"blur(3px)",
+        scale:1
+    })
+
 
     gsap.timeline({
         scrollTrigger:{
             trigger:".container3",
             pin:".container3",
             scrub:2,
-            end:"+300%"
+            end:"+350%"
         }
     })
 
+
     .to(".container3__pasillo",{
-        duration:5,
+        duration:15,
         scale:"-=6.8",
+    })
+
+    .to(".container3__ojos",{
+        opacity:1,
+        duration:5,
+    })
+    .to(".container3__ojos",{
+        opacity:0,
+        duration:7,
+    })
+    .to(".container3__ojos",{
+        duration:1,
+        opacity:3,
+        scale:1.1
 
     })
     .to(".container3__pasillo",{
         webkitFilter:"blur(5px)"
     })
 
+
     .to(".container3__tesoro",{
-        duration:3,
+        duration:10,
         scale:1,
         opacity:1
     })
 
+
+    .to(".container4",{
+        delay:10
+    })
+    .to(".container3",{
+        opacity:0,
+        duration:10,
+    })
  /*    .to(".container3__tesoro",{
         webkitFilter:"blur(5px)"
     })
@@ -139,37 +169,6 @@
 })();
 
 
-
-/* 
-    gsap.registerPlugin(ScrollTrigger);
-
-    let tl = gsap.timeline({
-        duration:5,
-        delay:3,
-    });
-
-
-    tl.to(".container3__pasillo", {
-        scale:"-=7.3",
-        duration:3,
-        scrollTrigger:{
-            trigger: ".container3",
-            pin: true,
-            scrub: 2,
-            end: "+=350%"
-        }
-    })
-
-    tl.to(".container3__tesoro", {
-        delay:3,
-        scale:"-=.9",
-        scrollTrigger:{
-            trigger: ".container3__pasillo",
-            pin: true,
-            scrub: 1,
-        }
-    })
- */
     
     
     
