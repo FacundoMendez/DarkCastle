@@ -211,15 +211,14 @@ html{
     object-fit: cover;
     width: 100%;
     height: 100%;
-
 }
 
 .container3__ojos{
-    width: 20%;
-    height: 15rem;
     position: absolute;
     top: 40%;
     left: 50%;
+    width: 280px;
+    height: 25%;
     transform: translate(-50%, -50%);
     text-align: center;
     opacity:0;
@@ -323,4 +322,16 @@ html{
   /*   .container3__pasillo{
         display: none;
     } */
+
+    /* container 3  */
+    .container3__ojos{
+        position: absolute;
+        top: 42%;
+        left: 50%;
+        width: 55%;
+        height: 25%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        opacity:0;
+    }
 }
