@@ -207,7 +207,7 @@ html{
     z-index: 2;
 }
 
-.container3__tesoro img{
+.container3__tesoro video{
     object-fit: cover;
     width: 100%;
     height: 100%;

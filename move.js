@@ -118,7 +118,7 @@
             trigger:".container3",
             pin:".container3",
             scrub:2,
-            end:"+350%"
+            end:"+380%"
         }
     })
 
@@ -146,13 +146,11 @@
         webkitFilter:"blur(5px)"
     })
 
-
     .to(".container3__tesoro",{
-        duration:10,
+        duration:20,
         scale:1,
         opacity:1
     })
-
 
     .to(".container4",{
         delay:10
