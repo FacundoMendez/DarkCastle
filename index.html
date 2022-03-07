@@ -46,31 +46,73 @@
     </div>
 
     <main class="main">
-        <div class=" container2">
-            <p>container 2</p>
+
+        <div class="cofreRojo">
+            <div class="flecha__back-rojo">
+                <img src="./src/flecha-back.png" alt="Flecha back">
+            </div>
+            <p>Cofre ROJO</p>
         </div>
 
-        <div class="container3">
-            <div class="container3__ojos">
-                <img src="./src/ojos.png" alt="OjosBlack">
+        <div class="cofreGris">
+            <div class="flecha__back-gris">
+                <img src="./src/flecha-back.png" alt="Flecha back">
             </div>
-            <div class="container3__pasillo">
-                <img  src="./src/pasilloCastle1.png" alt="Pasillo castillo">
-            </div>
+            <p>Cofre GRIS</p>
+        </div>
 
-            <div class="container3__tesoro">
-                <!-- <img  src="./src/backgroundTesoro.png" alt="Pasillo castillo"> -->
-                <video src="./src/cofres.mp4" loop muted autoplay type="video/mp4"></video>
+        <div class="cofreVerde">
+            <div class="flecha__back-verde ">
+                <img src="./src/flecha-back.png" alt="Flecha back">
+            </div>
+            <p>Cofre VERDE</p>
+        </div>
+
+        <div class="cofreDiamante">
+            <div class="flecha__back-diamante">
+                <img src="./src/flecha-back.png" alt="Flecha back">
+            </div>
+            <p>Cofre DIAMANTE</p>
+        </div>
+
+
+        <div class="viewport">
+            <div class=" container2">
+                <p>container 2</p>
+            </div>
+    
+            <div class="container3">
+                <div class="container3__ojos">
+                    <img src="./src/ojos.png" alt="OjosBlack">
+                </div>
+                <div class="container3__pasillo">
+                    <img  src="./src/pasilloCastle1.png" alt="Pasillo castillo">
+                </div>
+    
+                <div id="cofres" class="container3__tesoro">
+                    <video src="./src/cofres.mp4" loop muted autoplay type="video/mp4"></video>
+                  
+                </div>
+                <div class="container3__buttons">
+                    <div class="container3__button-cofre-gris buttonCofre"></div>
+                    <div class="container3__button-cofre-verde buttonCofre"></div>
+                    <div class="container3__button-cofre-rojo buttonCofre"></div>
+                    <div class="container3__button-cofre-diamante buttonCofre"></div>
+                </div>
+            </div>
+    
+            <div class="container4">
+                <p>container 4</p>
             </div>
         </div>
 
-        <div class="container4">
-            <p>container 4</p>
-        </div>
-        
     </main>
 
  
+<script src="./js/cofres/cofre-rojo.js"></script>
+<script src="./js/cofres/cofre-gris.js"></script>
+<script src="./js/cofres/cofre-verde.js"></script>
+<script src="./js/cofres/cofre-diamante.js"></script>
 
 </body>
 

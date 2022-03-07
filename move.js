@@ -1,14 +1,17 @@
+ /* PRELOAD -- DESKTOP */
+ 
  (() =>{
 
     let preload = document.querySelector(".preload");  
     setTimeout(function(){
         preload.classList.add("cerrar");
         preload.style.zIndex=0;
-    },20000)
+    },21000)
 
+    
 
     let tl = gsap.timeline({
-        delay:18,
+        delay:19,
     });
 
     tl.to(".preload__video",{  
@@ -17,10 +20,15 @@
     })
  
     tl.to(".ball",{
-        duration:1, 
+        duration:2, 
         opacity:3,
         'webkitFilter': 'blur(2rem)',
         scale:10,       
+    })
+
+    tl.to(".skip p",{        
+        delay:-3,
+        opacity: 0,
     })
 
     tl.to(".container",{ 
@@ -28,15 +36,20 @@
         opacity:1,
     })
 
+    tl.to(".preload",{  
+        display:"none"
+    })
+ 
 
     gsap.to(".skip p",{        
         /* delay:11, */
         display: "inline-block",
         opacity: 1,
     })
-     
 
 
+
+    /* preload skip */
     let skip = document.querySelector(".skip");
     let container = document.querySelector(".container")
 
@@ -44,6 +57,9 @@
         skip.addEventListener("click", function(){
 
             container.style.opacity="0";
+            gsap.set("body",{
+                backgroundColor:"white"
+            })
 
             gsap.to(container,{        
                 duration: 3,       
@@ -57,12 +73,22 @@
                 opacity:-.5,
                 display:"none"
             })
+
+            gsap.to("body",{
+                delay:5,
+                backgroundColor:"black"
+            })
+
+       
         });
     }
 
     videoSkip()
 })();
 
+
+
+/* PRELOAD MOVILE */
 
 (() =>{
   let preload = document.querySelector(".preload__movile");  
@@ -93,6 +119,8 @@
 
 })();
 
+
+/* CONTAINER 3 -- PASILLO / COFRES */
 (() =>{
     gsap.registerPlugin(ScrollTrigger);
 
@@ -112,6 +140,10 @@
         scale:1
     })
 
+    gsap.set(".container3__buttons",{
+        opacity:0,
+        scale:1
+    })
 
     gsap.timeline({
         scrollTrigger:{
@@ -121,7 +153,6 @@
             end:"+380%"
         }
     })
-
 
     .to(".container3__pasillo",{
         duration:15,
@@ -140,8 +171,8 @@
         duration:1,
         opacity:3,
         scale:1.1
-
     })
+
     .to(".container3__pasillo",{
         webkitFilter:"blur(5px)"
     })
@@ -151,6 +182,23 @@
         scale:1,
         opacity:1
     })
+    .to(".container3__buttons",{
+        duration:.1,
+        scale:1,
+        opacity:1,
+    })
+
+    .to(".container3__buttons",{
+        duration:.1,
+        scale:1,
+        opacity:1,
+    })
+
+    .to(".buttonCofre",{
+        delay:-1,
+        display:"inline-block",
+    })
+
 
     .to(".container4",{
         delay:10
@@ -164,9 +212,7 @@
     })
  */
 
+
 })();
 
 
-    
-    
-    
