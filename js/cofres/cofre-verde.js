@@ -5,12 +5,15 @@ let cofreVerde = document.querySelector(".container3__button-cofre-verde");
 cofreVerde.addEventListener("click", function(){
 
     gsap.timeline()
-
+    .to("body",{
+        duration:.5,
+        overflow:"hidden",
+    })
     .to(".container3__tesoro",{
         duration:3.8,
         scale:3,
-        x:300,
-        y:-260,
+        x:600,
+        y:-460,
     })
 
     .to(".container3",{
@@ -26,7 +29,7 @@ cofreVerde.addEventListener("click", function(){
     .to(".cofreVerde",{
         delay:-1.5,
         opacity:1,
-        duration:1.4,
+        duration:1.2,
         display:"inline-block"
     })
 
@@ -76,6 +79,9 @@ flecha__backVerde.addEventListener("click", function(){
 
     gsap.to(".cofreDiamante",{
         display:"none"
+    })
+    gsap.to("body",{
+        overflow:"visible",
     })
 
 })    

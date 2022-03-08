@@ -5,12 +5,15 @@ let cofreGris = document.querySelector(".container3__button-cofre-gris");
 cofreGris.addEventListener("click", function(){
 
     gsap.timeline()
-
+    .to("body",{
+        duration:.5,
+        overflow:"hidden",
+    })
     .to(".container3__tesoro",{
         duration:3.8,
         scale:3,
-        x:900,
-        y:-260,
+        x:1300,
+        y:-460,
     })
 
     .to(".container3",{
@@ -26,7 +29,7 @@ cofreGris.addEventListener("click", function(){
     .to(".cofreGris",{
         delay:-1.5,
         opacity:1,
-        duration:1.4,
+        duration:1.2,
         display:"inline-block"
     })
 
@@ -43,7 +46,9 @@ cofreGris.addEventListener("click", function(){
     })
 })
 
+
 let flecha__backGris = document.querySelector(".flecha__back-gris");
+    
 
 flecha__backGris.addEventListener("click", function(){
   
@@ -78,5 +83,8 @@ flecha__backGris.addEventListener("click", function(){
         display:"none"
     })
 
+    gsap.to("body",{
+        overflow:"visible",
+    })
 })    
     

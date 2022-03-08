@@ -149,13 +149,13 @@
         scrollTrigger:{
             trigger:".container3",
             pin:".container3",
-            scrub:2,
-            end:"+380%"
+            scrub:1.8,
+            end:"+420%"
         }
     })
 
     .to(".container3__pasillo",{
-        duration:15,
+        duration:18,
         scale:"-=6.8",
     })
 

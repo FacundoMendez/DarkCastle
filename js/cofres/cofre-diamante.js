@@ -5,12 +5,15 @@ let cofreDiamante = document.querySelector(".container3__button-cofre-diamante")
 cofreDiamante.addEventListener("click", function(){
 
     gsap.timeline()
-
+    .to("body",{
+        duration:.5,
+        overflow:"hidden",
+    })
     .to(".container3__tesoro",{
         duration:3.8,
         scale:3,
-        x:-900,
-        y:-260,
+        x:-1300,
+        y:-460,
     })
 
     .to(".container3",{
@@ -26,7 +29,7 @@ cofreDiamante.addEventListener("click", function(){
     .to(".cofreDiamante",{
         delay:-1.5,
         opacity:1,
-        duration:1.4,
+        duration:1.2,
         display:"inline-block"
     })
 
@@ -80,5 +83,8 @@ flecha__backDiamante.addEventListener("click", function(){
         display:"none"
     })
 
+    gsap.to("body",{
+        overflow:"visible",
+    })
 })    
     
