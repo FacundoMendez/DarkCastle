@@ -1,4 +1,4 @@
-
+(() =>{
 /* ------- COFRE ROJO -------- */
 
 let cofreRojo = document.querySelector(".container3__button-cofre-rojo");
@@ -49,9 +49,85 @@ cofreRojo.addEventListener("click", function(){
         display:"none"
     })
 
-
+    .to(".container3__tesoro",{
+        scale:1,
+        x:0,
+        y:0,
+    })
 })    
+
+})();
+
     
+(() =>{
+
+/* CHARACTER COFRE ROJO */
+
+let character1 = document.querySelector(".character1");
+let character2 = document.querySelector(".character2");
+let character3 = document.querySelector(".character3");
+
+character1.addEventListener("click", function(){
+    gsap.set(".character1-grande",{
+        duration:2,
+        opacity:1,
+    })
+
+    gsap.set(".character2-grande",{
+        duration:2,
+        opacity:0,
+    })
+
+    gsap.set(".character3-grande",{
+        duration:2,
+        opacity:0,
+    })
+
+});
+
+
+character2.addEventListener("click", function(){
+    gsap.set(".character1-grande",{
+        duration:2,
+        opacity:0,
+
+    })
+
+    gsap.set(".character2-grande",{
+        duration:2,
+        opacity:1,
+    })
+
+    gsap.set(".character3-grande",{
+        duration:2,
+        opacity:0,
+    })
+
+});
+
+
+character3.addEventListener("click", function(){
+    gsap.set(".character1-grande",{
+        duration:2,
+        opacity:0,
+    })
+
+    gsap.set(".character2-grande",{
+        duration:2,
+        opacity:0,
+    })
+
+    gsap.set(".character3-grande",{
+        duration:2,
+        opacity:1,
+    })
+
+});
+
+})();
+
+(() =>{
+
 /* FLECHA COFRE ROJO */
 let flecha__back = document.querySelector(".flecha__back-rojo");
 
@@ -59,12 +135,13 @@ let flecha__back = document.querySelector(".flecha__back-rojo");
 flecha__back.addEventListener("click", function(){
     
     gsap.to(".cofreRojo",{
-        duration:.5,
+        duration:1,
         opacity:-1,
         display:"none"
     })
 
     gsap.to(".container3",{
+        delay:.2,
         duration:2,
         opacity:1.1
     }) 
@@ -93,4 +170,5 @@ flecha__back.addEventListener("click", function(){
     })
 
 })    
-    
+
+})();

@@ -44,6 +44,12 @@ cofreVerde.addEventListener("click", function(){
     .to(".cofreDiamante",{
         display:"none"
     })
+
+    .to(".container3__tesoro",{
+        scale:1,
+        x:0,
+        y:0,
+    })
 })
 
 let flecha__backVerde = document.querySelector(".flecha__back-verde");

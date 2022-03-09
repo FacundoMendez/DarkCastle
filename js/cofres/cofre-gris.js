@@ -44,6 +44,12 @@ cofreGris.addEventListener("click", function(){
     .to(".cofreDiamante",{
         display:"none"
     })
+
+    .to(".container3__tesoro",{
+        scale:1,
+        x:0,
+        y:0,
+    })
 })
 
 
