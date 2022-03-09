@@ -13,7 +13,7 @@ cofreRojo.addEventListener("click", function(){
     
 
     .to(".container3__tesoro",{
-        duration:3.8,
+        duration:3.5,
         scale:3,
         x:-600,
         y:-460,
