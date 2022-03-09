@@ -63,22 +63,22 @@ cofreRojo.addEventListener("click", function(){
 
 /* CHARACTER COFRE ROJO */
 
-let character1 = document.querySelector(".character1");
-let character2 = document.querySelector(".character2");
-let character3 = document.querySelector(".character3");
+let character1 = document.querySelector(".character1-rojo");
+let character2 = document.querySelector(".character2-rojo");
+let character3 = document.querySelector(".character3-rojo");
 
 character1.addEventListener("click", function(){
-    gsap.set(".character1-grande",{
+    gsap.set(".character1-grande-rojo",{
         duration:2,
         opacity:1,
     })
 
-    gsap.set(".character2-grande",{
+    gsap.set(".character2-grande-rojo",{
         duration:2,
         opacity:0,
     })
 
-    gsap.set(".character3-grande",{
+    gsap.set(".character3-grande-rojo",{
         duration:2,
         opacity:0,
     })
@@ -87,18 +87,18 @@ character1.addEventListener("click", function(){
 
 
 character2.addEventListener("click", function(){
-    gsap.set(".character1-grande",{
+    gsap.set(".character1-grande-rojo",{
         duration:2,
         opacity:0,
 
     })
 
-    gsap.set(".character2-grande",{
+    gsap.set(".character2-grande-rojo",{
         duration:2,
         opacity:1,
     })
 
-    gsap.set(".character3-grande",{
+    gsap.set(".character3-grande-rojo",{
         duration:2,
         opacity:0,
     })
@@ -107,17 +107,17 @@ character2.addEventListener("click", function(){
 
 
 character3.addEventListener("click", function(){
-    gsap.set(".character1-grande",{
+    gsap.set(".character1-grande-rojo",{
         duration:2,
         opacity:0,
     })
 
-    gsap.set(".character2-grande",{
+    gsap.set(".character2-grande-rojo",{
         duration:2,
         opacity:0,
     })
 
-    gsap.set(".character3-grande",{
+    gsap.set(".character3-grande-rojo",{
         duration:2,
         opacity:1,
     })

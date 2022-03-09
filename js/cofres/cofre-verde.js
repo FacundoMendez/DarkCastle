@@ -1,3 +1,5 @@
+(() =>{
+
 /* -------COFRE VERDE--------- */
 
 let cofreVerde = document.querySelector(".container3__button-cofre-verde");
@@ -52,6 +54,10 @@ cofreVerde.addEventListener("click", function(){
     })
 })
 
+})();
+
+(() =>{
+
 let flecha__backVerde = document.querySelector(".flecha__back-verde");
 
 flecha__backVerde.addEventListener("click", function(){
@@ -91,4 +97,73 @@ flecha__backVerde.addEventListener("click", function(){
     })
 
 })    
+
+})();
+
     
+(() =>{
+
+/* CHARACTER COFRE VERDE */
+
+let character1 = document.querySelector(".character1-verde");
+let character2 = document.querySelector(".character2-verde");
+let character3 = document.querySelector(".character3-verde");
+
+character1.addEventListener("click", function(){
+    gsap.set(".character1-grande-verde",{
+        duration:2,
+        opacity:1,
+    })
+
+    gsap.set(".character2-grande-verde",{
+        duration:2,
+        opacity:0,
+    })
+
+    gsap.set(".character3-grande-verde",{
+        duration:2,
+        opacity:0,
+    })
+
+});
+
+
+character2.addEventListener("click", function(){
+    gsap.set(".character1-grande-verde",{
+        duration:2,
+        opacity:0,
+
+    })
+
+    gsap.set(".character2-grande-verde",{
+        duration:2,
+        opacity:1,
+    })
+
+    gsap.set(".character3-grande-verde",{
+        duration:2,
+        opacity:0,
+    })
+
+});
+
+
+character3.addEventListener("click", function(){
+    gsap.set(".character1-grande-verde",{
+        duration:2,
+        opacity:0,
+    })
+
+    gsap.set(".character2-grande-verde",{
+        duration:2,
+        opacity:0,
+    })
+
+    gsap.set(".character3-grande-verde",{
+        duration:2,
+        opacity:1,
+    })
+
+});
+
+})();

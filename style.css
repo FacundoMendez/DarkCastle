@@ -320,7 +320,7 @@ body{
     font-weight: bold;
     border-top-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    bottom: 8rem;
+    bottom: 13rem;
     left: 50%;
     transform: translate(-50%);
     position: absolute;
@@ -346,8 +346,8 @@ body{
         /* container derecha */
 
 .container2__cofreRojo{
-    width: 55%;
-    height: 105vh;
+    width: 58%;
+    height: 100vh;
     position: relative;
     display: flex;
     justify-content: center;
@@ -358,7 +358,7 @@ body{
   
 .stars-cofreRojo {
     position: relative;
-    width: 88%;
+    width: 90%;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -373,18 +373,18 @@ body{
     object-fit: cover;
 }
 
-.character1 img{
+.character1-rojo img{
     width: 100%;
 }
-.character2 img{
+.character2-rojo img{
     width: 100%;
 }
-.character3 img{
+.character3-rojo img{
     width: 100%;
 }
 
 
-.character1{
+.character1-rojo{
     width: 25%;
     position: absolute;
     left: 10%;
@@ -392,19 +392,19 @@ body{
     filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
 }
 
-.character1 img{
+.character1-rojo img{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.character1:hover{
+.character1-rojo:hover{
     filter: drop-shadow(0px 0px 10px rgb(51, 255, 0));
     transition: all 0.25s ease-in-out;
 }
 
 
-.character2{
+.character2-rojo{
     width: 25%;
     position: absolute;
     left: 50%;
@@ -413,13 +413,13 @@ body{
     filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
 }
 
-.character2:hover{
+.character2-rojo:hover{
     filter: drop-shadow(0px 0px 10px rgb(51, 255, 0));
     transition: all 0.25s ease-in-out;
 }
 
 
-.character3{
+.character3-rojo{
     width: 25%;
     position: absolute;
     right: 10%;
@@ -427,7 +427,7 @@ body{
     filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
 }
 
-.character3:hover{
+.character3-rojo:hover{
     filter: drop-shadow(0px 0px 10px rgb(43, 255, 0));
     transition: all 0.25s ease-in-out;
 }
@@ -444,7 +444,7 @@ body{
 }
 
 
-.character1-grande{
+.character1-grande-rojo{
     position: absolute;
     top: 5%;
     left: 50%;
@@ -455,7 +455,7 @@ body{
 
 }
 
-.character2-grande{
+.character2-grande-rojo{
     position: absolute;
     top: 5%;
     left: 50%;
@@ -466,7 +466,7 @@ body{
 
 }
 
-.character3-grande{
+.character3-grande-rojo{
     position: absolute;
     top: 5%;
     left: 50%;
@@ -477,127 +477,688 @@ body{
 
 }
 
-.character1-grande img{
+.character1-grande-rojo img{
     width: 100%;
 }
-.character2-grande img{
+.character2-grande-rojo img{
     width: 100%;
 }
-.character3-grande img{
+.character3-grande-rojo img{
     width: 100%;
 }
 
 
 
 /* cofre gris */
+
+
 .cofreGris{
+    top: 0;
+    position: fixed;
     width: 100vw;
     height: 100vh;
-    position: relative;
-    background-color: #000000;
-    font-size: 6rem;
-    color: rgb(219, 219, 219);
-    text-align: center;
-    padding: 20rem 0;
+    background-image: url("./src/cofres/backgroundCofres.png");
+    background-size: cover;
+    background-repeat: no-repeat;
     opacity: 0;
-    display: none;
     z-index: 5;
-    position: fixed;
-    top: 0;
+    display: none;
+}
+
+.contenedor__cofreGris{
+    position: relative;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+
 }
 
 .flecha__back-gris{
+    width: 11rem;
+    height: 9rem;
     position: absolute;
-    top: 0%;
+    top: 0;
     left: 5%;
-    width: 10rem;
-    height: 10rem;
     cursor: pointer;
-    user-select: none;
-}
-
-.flecha__back-gris:active{
-    width: 9.5rem;
-    height: 9.5rem;
+    z-index: 10;
 }
 
 .flecha__back-gris img{
     width: 100%;
     height: 100%;
+
 }
 
-/* cofre diamante */
-.cofreDiamante{
-    width: 100vw;
+
+/* button buy cofre */
+.buttonBuy-cofreGris button{
+    width: 15rem;
+    height: 7rem;
+    cursor: pointer;
+    font-size: 3.5rem;
+    color: white;
+    background-color: rgb(13, 13, 14);
+    border-color: rgba(153, 255, 0, 0.356);
+    letter-spacing: 1px;
+    font-weight: bold;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    bottom: 13rem;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+}
+
+.buttonBuy-cofreGris button:active{
+    width: 14.5rem;
+    height: 6.5rem;
+    font-size: 3rem;
+    border-color: rgb(153, 255, 0);
+} 
+
+
+        /* container izquierda */
+
+.container1__cofreGris{
+    width: 35%;
     height: 100vh;
     position: relative;
-    background-color: #000000;
-    font-size: 6rem;
-    color: rgb(158, 216, 255);
-    text-align: center;
-    padding: 20rem 0;
-    opacity: 0;
-    display: none;
-    position: fixed;
-    top: 0;
-    z-index: 5;
+    filter: drop-shadow(0px 0px 14px black);
 }
 
-.flecha__back-diamante{
+        /* container derecha */
+
+.container2__cofreGris{
+    width: 58%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+  
+.stars-cofreGris {
+    position: relative;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(0px 0px 10px rgb(0, 2, 0));
+}
+
+.stars-cofreGris img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.character1-gris img{
+    width: 100%;
+}
+.character2-gris img{
+    width: 100%;
+}
+.character3-gris img{
+    width: 100%;
+}
+
+
+.character1-gris{
+    width: 25%;
     position: absolute;
-    top: 0%;
-    left: 5%;
-    width: 10rem;
-    height: 10rem;
+    left: 10%;
     cursor: pointer;
-    user-select: none;
+    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
 }
 
-.flecha__back-diamante:active{
-    width: 9.5rem;
-    height: 9.5rem;
+.character1-gris img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.flecha__back-diamante img{
+.character1-gris:hover{
+    filter: drop-shadow(0px 0px 10px rgb(51, 255, 0));
+    transition: all 0.25s ease-in-out;
+}
+
+
+.character2-gris{
+    width: 25%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    cursor: pointer;
+    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+}
+
+.character2-gris:hover{
+    filter: drop-shadow(0px 0px 10px rgb(51, 255, 0));
+    transition: all 0.25s ease-in-out;
+}
+
+
+.character3-gris{
+    width: 25%;
+    position: absolute;
+    right: 10%;
+    cursor: pointer;
+    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+}
+
+.character3-gris:hover{
+    filter: drop-shadow(0px 0px 10px rgb(43, 255, 0));
+    transition: all 0.25s ease-in-out;
+}
+
+
+.characterStats-cofreGris {
+    position: relative;
+    width: 80%;
+}
+
+.characterStats-cofreGris img{
     width: 100%;
     height: 100%;
 }
 
+
+.character1-grande-gris{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 90%;
+    z-index: 3;
+    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+}
+
+.character2-grande-gris{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 90%;
+    z-index: 2;
+    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+}
+
+.character3-grande-gris{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 90%;
+    z-index: 1;
+    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+}
+
+.character1-grande-gris img{
+    width: 100%;
+}
+.character2-grande-gris img{
+    width: 100%;
+}
+.character3-grande-gris img{
+    width: 100%;
+}
+
+
+
 /* cofre verde */
+
+
 .cofreVerde{
+    top: 0;
+    position: fixed;
     width: 100vw;
     height: 100vh;
-    position: relative;
-    background-color: #000000;
-    font-size: 6rem;
-    color: rgb(94, 255, 0);
-    text-align: center;
-    padding: 20rem 0;
+    background-image: url("./src/cofres/backgroundCofres.png");
+    background-size: cover;
+    background-repeat: no-repeat;
     opacity: 0;
-    display: none;
-    position: fixed;
-    top: 0;
     z-index: 5;
+    display: none;
+}
+
+.contenedor__cofreVerde{
+    position: relative;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+
 }
 
 .flecha__back-verde{
+    width: 11rem;
+    height: 9rem;
     position: absolute;
-    top: 0%;
+    top: 0;
     left: 5%;
-    width: 10rem;
-    height: 10rem;
     cursor: pointer;
-    user-select: none;
-}
-
-.flecha__back-verde:active{
-    width: 9.5rem;
-    height: 9.5rem;
+    z-index: 10;
 }
 
 .flecha__back-verde img{
     width: 100%;
     height: 100%;
+
+}
+
+
+/* button buy cofre */
+.buttonBuy-cofreVerde button{
+    width: 15rem;
+    height: 7rem;
+    cursor: pointer;
+    font-size: 3.5rem;
+    color: white;
+    background-color: rgb(13, 13, 14);
+    border-color: rgba(153, 255, 0, 0.356);
+    letter-spacing: 1px;
+    font-weight: bold;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    bottom: 13rem;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+}
+
+.buttonBuy-cofreVerde button:active{
+    width: 14.5rem;
+    height: 6.5rem;
+    font-size: 3rem;
+    border-color: rgb(153, 255, 0);
+} 
+
+
+        /* container izquierda */
+
+.container1__cofreVerde{
+    width: 35%;
+    height: 100vh;
+    position: relative;
+    filter: drop-shadow(0px 0px 14px black);
+}
+
+        /* container derecha */
+
+.container2__cofreVerde{
+    width: 58%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+  
+.stars-cofreVerde {
+    position: relative;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(0px 0px 10px rgb(0, 2, 0));
+}
+
+.stars-cofreVerde img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.character1-verde img{
+    width: 100%;
+}
+.character2-verde img{
+    width: 100%;
+}
+.character3-verde img{
+    width: 100%;
+}
+
+
+.character1-verde{
+    width: 25%;
+    position: absolute;
+    left: 10%;
+    cursor: pointer;
+    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+}
+
+.character1-verde img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.character1-verde:hover{
+    filter: drop-shadow(0px 0px 10px rgb(51, 255, 0));
+    transition: all 0.25s ease-in-out;
+}
+
+
+.character2-verde{
+    width: 25%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    cursor: pointer;
+    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+}
+
+.character2-verde:hover{
+    filter: drop-shadow(0px 0px 10px rgb(51, 255, 0));
+    transition: all 0.25s ease-in-out;
+}
+
+
+.character3-verde{
+    width: 25%;
+    position: absolute;
+    right: 10%;
+    cursor: pointer;
+    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+}
+
+.character3-verde:hover{
+    filter: drop-shadow(0px 0px 10px rgb(43, 255, 0));
+    transition: all 0.25s ease-in-out;
+}
+
+
+.characterStats-cofreVerde {
+    position: relative;
+    width: 80%;
+}
+
+.characterStats-cofreVerde img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.character1-grande-verde{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 90%;
+    z-index: 3;
+    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+}
+
+.character2-grande-verde{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 90%;
+    z-index: 2;
+    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+}
+
+.character3-grande-verde{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 90%;
+    z-index: 1;
+    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+}
+
+.character1-grande-verde img{
+    width: 100%;
+}
+.character2-grande-verde img{
+    width: 100%;
+}
+.character3-grande-verde img{
+    width: 100%;
+}
+
+
+/* cofre DIAMANTE */
+
+
+.cofreDiamante{
+    top: 0;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("./src/cofres/backgroundCofres.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: 5;
+    display: none;
+}
+
+.contenedor__cofreDiamante{
+    position: relative;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+}
+
+.flecha__back-diamante{
+    width: 11rem;
+    height: 9rem;
+    position: absolute;
+    top: 0;
+    left: 5%;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.flecha__back-diamante img{
+    width: 100%;
+    height: 100%;
+
+}
+
+
+/* button buy cofre */
+.buttonBuy-cofreDiamante button{
+    width: 15rem;
+    height: 7rem;
+    cursor: pointer;
+    font-size: 3.5rem;
+    color: white;
+    background-color: rgb(13, 13, 14);
+    border-color: rgba(153, 255, 0, 0.356);
+    letter-spacing: 1px;
+    font-weight: bold;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    bottom: 13rem;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+}
+
+.buttonBuy-cofreDiamante button:active{
+    width: 14.5rem;
+    height: 6.5rem;
+    font-size: 3rem;
+    border-color: rgb(153, 255, 0);
+} 
+
+
+        /* container izquierda */
+
+.container1__cofreDiamante{
+    width: 35%;
+    height: 100vh;
+    position: relative;
+    filter: drop-shadow(0px 0px 14px black);
+}
+
+        /* container derecha */
+
+.container2__cofreDiamante{
+    width: 58%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+  
+.stars-cofreDiamante {
+    position: relative;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(0px 0px 10px rgb(0, 2, 0));
+}
+
+.stars-cofreDiamante img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.character1-diamante img{
+    width: 100%;
+}
+.character2-diamante img{
+    width: 100%;
+}
+.character3-diamante img{
+    width: 100%;
+}
+
+
+.character1-diamante{
+    width: 25%;
+    position: absolute;
+    left: 10%;
+    cursor: pointer;
+    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+}
+
+.character1-diamante img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.character1-diamante:hover{
+    filter: drop-shadow(0px 0px 10px rgb(51, 255, 0));
+    transition: all 0.25s ease-in-out;
+}
+
+
+.character2-diamante{
+    width: 25%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    cursor: pointer;
+    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+}
+
+.character2-diamante:hover{
+    filter: drop-shadow(0px 0px 10px rgb(51, 255, 0));
+    transition: all 0.25s ease-in-out;
+}
+
+
+.character3-diamante{
+    width: 25%;
+    position: absolute;
+    right: 10%;
+    cursor: pointer;
+    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+}
+
+.character3-diamante:hover{
+    filter: drop-shadow(0px 0px 10px rgb(43, 255, 0));
+    transition: all 0.25s ease-in-out;
+}
+
+
+.characterStats-cofreDiamante {
+    position: relative;
+    width: 80%;
+}
+
+.characterStats-cofreDiamante img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.character1-grande-diamante{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 90%;
+    z-index: 3;
+    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+}
+
+.character2-grande-diamante{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 90%;
+    z-index: 2;
+    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+}
+
+.character3-grande-diamante{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 90%;
+    z-index: 1;
+    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+}
+
+.character1-grande-diamante img{
+    width: 100%;
+}
+.character2-grande-diamante img{
+    width: 100%;
+}
+.character3-grande-diamante img{
+    width: 100%;
 }
 
 
