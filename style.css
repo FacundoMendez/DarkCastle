@@ -151,7 +151,6 @@ body{
     height: 100vh;
     z-index: 4;
     opacity: 0;
-
 }
 
 .img__animated-preload-movil{
@@ -247,12 +246,13 @@ body{
     align-items: center;
     flex-wrap: nowrap;
     gap: 150px;
-    margin-top: 520px;
+    margin-top: 450px;
+
 }
 
 .buttonCofre{
     width: 170px;
-    height: 300px;
+    height: 400px;
     cursor: pointer;
     user-select: none;
     display: none;
@@ -287,19 +287,23 @@ body{
     flex-direction: row;
     flex-wrap: wrap;
     gap: 2rem;
+
 }
 
 .flecha__back-rojo{
-    width: 10rem;
-    height: 5rem;
+    width: 11rem;
+    height: 9rem;
     position: absolute;
     top: 0;
-    cursor: pointer;
     left: 5%;
+    cursor: pointer;
+    z-index: 10;
 }
 
 .flecha__back-rojo img{
     width: 100%;
+    height: 100%;
+
 }
 
 
@@ -316,7 +320,7 @@ body{
     font-weight: bold;
     border-top-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    bottom: 5rem;
+    bottom: 8rem;
     left: 50%;
     transform: translate(-50%);
     position: absolute;
@@ -333,7 +337,7 @@ body{
         /* container izquierda */
 
 .container1__cofreRojo{
-    width: 30%;
+    width: 35%;
     height: 100vh;
     position: relative;
     filter: drop-shadow(0px 0px 14px black);
@@ -342,7 +346,7 @@ body{
         /* container derecha */
 
 .container2__cofreRojo{
-    width: 56%;
+    width: 55%;
     height: 105vh;
     position: relative;
     display: flex;
@@ -354,14 +358,13 @@ body{
   
 .stars-cofreRojo {
     position: relative;
-    width: 105%;
+    width: 88%;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
     filter: drop-shadow(0px 0px 10px rgb(0, 2, 0));
-
 }
 
 .stars-cofreRojo img{
@@ -395,14 +398,9 @@ body{
     object-fit: cover;
 }
 
-
 .character1:hover{
     filter: drop-shadow(0px 0px 10px rgb(51, 255, 0));
     transition: all 0.25s ease-in-out;
-}
-
-.character1:active{
-    filter: drop-shadow(0px 0px 25px rgb(30, 255, 0));
 }
 
 
@@ -413,17 +411,11 @@ body{
     transform: translate(-50%);
     cursor: pointer;
     filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
-
-
 }
 
 .character2:hover{
     filter: drop-shadow(0px 0px 10px rgb(51, 255, 0));
     transition: all 0.25s ease-in-out;
-}
-
-.character2:active{
-    filter: drop-shadow(0px 0px 25px rgb(9, 255, 0));
 }
 
 
@@ -433,7 +425,6 @@ body{
     right: 10%;
     cursor: pointer;
     filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
-
 }
 
 .character3:hover{
@@ -441,30 +432,21 @@ body{
     transition: all 0.25s ease-in-out;
 }
 
-.character3:active{
-    filter: drop-shadow(0px 0px 25px rgb(51, 255, 0));
-
-}
-
-
 
 .characterStats-cofreRojo {
     position: relative;
-    width: 95%;
-    height: 42%;
-
+    width: 80%;
 }
 
 .characterStats-cofreRojo img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
 }
 
 
 .character1-grande{
     position: absolute;
-    top: 0;
+    top: 5%;
     left: 50%;
     transform: translate(-50%);
     width: 90%;
@@ -475,7 +457,7 @@ body{
 
 .character2-grande{
     position: absolute;
-    top: 0;
+    top: 5%;
     left: 50%;
     transform: translate(-50%);
     width: 90%;
@@ -486,7 +468,7 @@ body{
 
 .character3-grande{
     position: absolute;
-    top: 0;
+    top: 5%;
     left: 50%;
     transform: translate(-50%);
     width: 90%;
@@ -505,144 +487,6 @@ body{
     width: 100%;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-/* .cofreRojo{
-    width: 100vw;
-    height: auto;
-    background-image: url("./src/cofres/backgroundCofres.png");
-    object-fit: cover;
-    background-repeat: no-repeat;
-    font-size: 6rem;
-    color: red;
-    text-align: center;
-    padding: 3rem 0;
-    opacity: 0;
-    z-index: 5;
-    display: none;
-    position: fixed;
-    top: 0;
-
-}
-
-.flecha__back-rojo{
-    position: absolute;
-    top: 0%;
-    left: 5%;
-    width: 10rem;
-    height: 10rem;
-    cursor: pointer;
-    user-select: none;
-}
-
-.flecha__back-rojo:active{
-    width: 9.5rem;
-    height: 9.5rem;
-}
-
-.flecha__back-rojo img{
-    width: 100%;
-    height: 100%;
-}
-
-
-.container__cofreRojo{
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100vw;
-    height: 90vh;
-}
- */
-/* button buy cofre */
-/* 
-.buttonBuy-cofreRojo button{
-    width: 15rem;
-    height: 7rem;
-    cursor: pointer;
-    font-size: 3.5rem;
-    color: white;
-    background-color: rgb(13, 13, 14);
-    border-color: rgba(153, 255, 0, 0.356);
-    letter-spacing: 1px;
-    font-weight: bold;
-    border-top-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-}
-
-.buttonBuy-cofreRojo button:active{
-    width: 14.5rem;
-    height: 6.5rem;
-    font-size: 3rem;
-    border-color: rgb(153, 255, 0);
-} */
-        /* conainer izquierda */
-/* .container1__cofreRojo{
-    width: 45vw;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.img-cofreRojo{
-    width: 100%;
-    height: 100%;
-}
-
-.buttonBuy-cofreRojo{
-    width: 100%;
-    height: 30%;
-} */
-
-        /* conainer derecha */
-
-/* 
-.container2__cofreRojo{
-    width: 55vw;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.characterStats-cofreRojo img{
-    width: 90%;
-    height: 90%;
-    margin-top: -5rem;
-}
-
-
-.stars-cofreRojo{
-    width: 100%;
-    height: 50%;
-}
-.stars-cofreRojo img{
-    width: 100%;
-    height: 85%;
-}
-
-
-.characterStats-cofreRojo{
-    width: 100%;
-    height: 50%;
-}
-
- */
 
 
 /* cofre gris */
