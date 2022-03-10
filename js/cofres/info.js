@@ -6,11 +6,20 @@ let containerInfoRojo = document.querySelector(".info-rojo")
 let exitRojo = document.querySelector(".exit-rojo")
 
 infoRojo.addEventListener("click",function(){
-    containerInfoRojo.style.display="inline-block"
+    gsap.to(containerInfoRojo,{
+        opacity: 10,
+        duration:.1,
+        display:"inline-block"
+    })
+
     cofreRojoPantalla.style.filter="blur(2rem)"
 })
 
 exitRojo.addEventListener("click",function(){
+    gsap.to(containerInfoRojo,{
+        opacity: -5,
+        duration:.5,
+    })
     containerInfoRojo.style.display="none"
     cofreRojoPantalla.style.filter="blur(0rem)"
 })
@@ -23,7 +32,11 @@ let containerInfoVerde = document.querySelector(".info-verde")
 let exitVerde = document.querySelector(".exit-verde")
 
 infoVerde.addEventListener("click",function(){
-    containerInfoVerde.style.display="inline-block"
+    gsap.to(infoVerde,{
+        opacity: 10,
+        duration:.1,
+        display:"inline-block"
+    })
     cofreVerdePantalla.style.filter="blur(2rem)"
 })
 
@@ -40,7 +53,11 @@ let containerInfoGris = document.querySelector(".info-gris")
 let exitGris = document.querySelector(".exit-gris")
 
 infoGris.addEventListener("click",function(){
-    containerInfoGris.style.display="inline-block"
+    gsap.to(infoGris,{
+        opacity: 10,
+        duration:.1,
+        display:"inline-block"
+    })
     cofreGrisPantalla.style.filter="blur(2rem)"
 })
 
@@ -56,7 +73,11 @@ let containerInfoDiamante = document.querySelector(".info-diamante")
 let exitDiamante = document.querySelector(".exit-diamante")
 
 infoDiamante.addEventListener("click",function(){
-    containerInfoDiamante.style.display="inline-block"
+    gsap.to(infoDiamante,{
+        opacity: 10,
+        duration:.1,
+        display:"inline-block"
+    })
     cofreDiamantePantalla.style.filter="blur(2rem)"
 })
 
