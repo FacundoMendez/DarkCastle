@@ -1,3 +1,4 @@
+(() =>{
 
 /* cofre rojo info */
 let infoRojo = document.querySelector(".saberMas-rojo");
@@ -24,6 +25,9 @@ exitRojo.addEventListener("click",function(){
     cofreRojoPantalla.style.filter="blur(0rem)"
 })
 
+})();
+
+(() =>{
 
 /* cofre verde info */
 let infoVerde = document.querySelector(".saberMas-verde");
@@ -32,7 +36,7 @@ let containerInfoVerde = document.querySelector(".info-verde")
 let exitVerde = document.querySelector(".exit-verde")
 
 infoVerde.addEventListener("click",function(){
-    gsap.to(infoVerde,{
+    gsap.to(containerInfoVerde,{
         opacity: 10,
         duration:.1,
         display:"inline-block"
@@ -41,9 +45,17 @@ infoVerde.addEventListener("click",function(){
 })
 
 exitVerde.addEventListener("click",function(){
+    gsap.to(containerInfoVerde,{
+        opacity: -5,
+        duration:.5,
+    })
     containerInfoVerde.style.display="none"
     cofreVerdePantalla.style.filter="blur(0rem)"
 })
+
+})();
+
+(() =>{
 
 
 /* cofre gris info */
@@ -53,7 +65,7 @@ let containerInfoGris = document.querySelector(".info-gris")
 let exitGris = document.querySelector(".exit-gris")
 
 infoGris.addEventListener("click",function(){
-    gsap.to(infoGris,{
+    gsap.to(containerInfoGris,{
         opacity: 10,
         duration:.1,
         display:"inline-block"
@@ -62,9 +74,18 @@ infoGris.addEventListener("click",function(){
 })
 
 exitGris.addEventListener("click",function(){
+    gsap.to(containerInfoGris,{
+        opacity: -5,
+        duration:.5,
+    })
     containerInfoGris.style.display="none"
     cofreGrisPantalla.style.filter="blur(0rem)"
 })
+
+})();
+
+(() =>{
+
 
 /* cofre diamond info */
 let infoDiamante = document.querySelector(".saberMas-diamante");
@@ -73,7 +94,7 @@ let containerInfoDiamante = document.querySelector(".info-diamante")
 let exitDiamante = document.querySelector(".exit-diamante")
 
 infoDiamante.addEventListener("click",function(){
-    gsap.to(infoDiamante,{
+    gsap.to(containerInfoDiamante,{
         opacity: 10,
         duration:.1,
         display:"inline-block"
@@ -82,6 +103,12 @@ infoDiamante.addEventListener("click",function(){
 })
 
 exitDiamante.addEventListener("click",function(){
+    gsap.to(containerInfoDiamante,{
+        opacity: -5,
+        duration:.5,
+    })
     containerInfoDiamante.style.display="none"
     cofreDiamantePantalla.style.filter="blur(0rem)"
 })
+
+})();

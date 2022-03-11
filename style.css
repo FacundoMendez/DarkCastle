@@ -320,10 +320,12 @@ body{
     font-weight: bold;
     border-top-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    bottom: 10rem;
+    bottom: 8rem;
     left: 55%;
     transform: translate(-50%);
     position: absolute;
+    filter: drop-shadow(0 0 30px rgb(254, 255, 254));
+
 }
 
 .buttonBuy-cofreRojo button:active{
@@ -613,10 +615,11 @@ body{
     font-weight: bold;
     border-top-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    bottom: 10rem;
+    bottom: 8rem;
     left: 55%;
     transform: translate(-50%);
     position: absolute;
+    filter: drop-shadow(0 0 30px rgb(254, 255, 254));
 }
 
 .buttonBuy-cofreGris button:active{
@@ -704,6 +707,7 @@ body{
     z-index: 20;
     display: none;
     transition: all 1s ease-in-out;
+    opacity: 0;
 }
 .info-gris span{
     position: absolute;
@@ -902,10 +906,12 @@ body{
     font-weight: bold;
     border-top-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    bottom: 10rem;
+    bottom: 8rem;
     left: 55%;
     transform: translate(-50%);
     position: absolute;
+    filter: drop-shadow(0 0 30px rgb(254, 255, 254));
+
 }
 
 .buttonBuy-cofreVerde button:active{
@@ -1000,6 +1006,7 @@ body{
     z-index: 20;
     display: none;
     transition: all 1s ease-in-out;
+    opacity: 0;
 }
 .info-verde span{
     position: absolute;
@@ -1181,8 +1188,8 @@ body{
 
 /* button buy cofre */
 .buttonBuy-cofreDiamante button{
-    width: 15rem;
-    height: 7rem;
+    width: 14rem;
+    height: 6rem;
     cursor: pointer;
     font-size: 3.5rem;
     color: white;
@@ -1192,10 +1199,12 @@ body{
     font-weight: bold;
     border-top-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    bottom: 10rem;
+    bottom: 8rem;
     left: 55%;
     transform: translate(-50%);
     position: absolute;
+    filter: drop-shadow(0 0 30px rgb(254, 255, 254));
+
 }
 
 .buttonBuy-cofreDiamante button:active{
@@ -1290,6 +1299,7 @@ body{
     z-index: 20;
     display: none;
     transition: all 1s ease-in-out;
+    opacity: 0;
 }
 .info-diamante span{
     position: absolute;
