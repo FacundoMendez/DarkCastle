@@ -126,14 +126,36 @@ body{
     overflow: hidden;
     width:100%;
     background-color: #000000;
-
+    z-index: 1000;
 }
 
 .video__skip-rayo{
     width:100vw;
     height: 100vh;
     object-fit: cover;
-    z-index: 7001;
+    z-index: 1000;
+}
+
+
+/* NAV  */
+
+
+.nav{
+    position: fixed;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 100;
+    width: 60vw;
+    margin-top: 0rem;
+    transition: all .5s ease-in-out;
+    opacity: 0;
+}
+
+.nav-img img{
+    width: 100%;
+    object-fit: cover;
+    filter: drop-shadow(0 0 20px rgba(48, 255, 41, 0.993));
 }
 
 

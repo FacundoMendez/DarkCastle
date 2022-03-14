@@ -8,7 +8,9 @@
         preload.style.zIndex=0;
     },21000)
 
-    
+    gsap.set(".nav",{
+        opacity:0,
+     })
 
     let tl = gsap.timeline({
         delay:19,
@@ -35,6 +37,12 @@
         duration:3,       
         opacity:1,
     })
+    gsap.to(".nav",{ 
+        duration:2,
+        ease: "back.out(1.7)",
+        opacity:1,
+    })
+
 
     tl.to(".preload",{  
         display:"none"
@@ -42,7 +50,7 @@
  
 
     gsap.to(".skip p",{        
-        /* delay:11, */
+        delay:11,
         display: "inline-block",
         opacity: 1,
     })
@@ -56,6 +64,9 @@
     function videoSkip(){
         skip.addEventListener("click", function(){
 
+            gsap.set(".nav",{
+                opacity:0,
+            })
             container.style.opacity="0";
             gsap.set("body",{
                 backgroundColor:"white"
@@ -79,12 +90,42 @@
                 backgroundColor:"black"
             })
 
+            gsap.to(".nav",{ 
+                delay:3.5,
+                duration:2,
+                ease: "back.out(1.7)",
+                opacity:1,
+            })
        
         });
     }
 
     videoSkip()
 })();
+
+
+/* ocultar scroll */
+
+(() =>{
+
+        $(window).scroll(function(){
+                var windowHeight = $(window).scrollTop();
+                var contenido2 = $(".main").offset();
+                contenido2 = contenido2.top;
+                if(windowHeight <= contenido2  ){
+                    /* $(".nav").fadeIn(500); */
+                    $(".nav").css("top", "-0rem");
+                    $(".nav").hover(function(){
+                        $(".nav").css("top", "0rem");
+                    })
+                }else{
+                /*   $(".nav").fadeOut(500); */
+                    $(".nav").css("top", "-24.5rem");
+                }
+        });
+
+})();
+
 
 
 
