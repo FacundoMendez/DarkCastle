@@ -1,0 +1,13 @@
+.body {
+    background: rgb();
+}
+
+.buttons {
+    display: flex;
+    margin: auto auto;
+    width: 60%;
+    justify-content: space-between;
+    margin-top: 5vmin;
+}
+
+27 20 86
