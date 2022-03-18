@@ -18,7 +18,21 @@
 .contenedor  {
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-top: 10vmin;
+    height: 60vh;
+}
+
+.nft-info {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
