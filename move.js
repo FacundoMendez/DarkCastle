@@ -50,7 +50,7 @@
  
 
     gsap.to(".skip p",{        
-        delay:11,
+        /* delay:11, */
         display: "inline-block",
         opacity: 1,
     })

@@ -5,6 +5,10 @@ let cofreGris = document.querySelector(".container3__button-cofre-gris");
 
 cofreGris.addEventListener("click", function(){
 
+    gsap.set(".header",{
+        display:"none"
+    })
+
     gsap.timeline()
     .to("body",{
         duration:.5,
@@ -95,6 +99,11 @@ flecha__backGris.addEventListener("click", function(){
     gsap.to("body",{
         overflow:"visible",
     })
+
+    
+    gsap.set(".header",{
+        display:"inline-block"
+    })
 })    
     
 })();
@@ -160,6 +169,7 @@ character3.addEventListener("click", function(){
         duration:2,
         opacity:1,
     })
+
 
 });
 

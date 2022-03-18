@@ -291,7 +291,7 @@ body{
     position: fixed;
     width: 100vw;
     height: 100vh;
-    background-image: url("./src/cofres/backgroundCofres.png");
+    background-image: url("./src/cofre rojo/backgroundCofreRojo.png");
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 0;
@@ -337,7 +337,7 @@ body{
     font-size: 3.5rem;
     color: white;
     background-color: rgb(13, 13, 14);
-    border-color: rgba(153, 255, 0, 0.356);
+    border-color: rgba(255, 0, 0, 0.356);
     letter-spacing: 1px;
     font-weight: bold;
     border-top-left-radius: 15px;
@@ -354,7 +354,7 @@ body{
     width: 14.5rem;
     height: 6.5rem;
     font-size: 3rem;
-    border-color: rgb(153, 255, 0);
+    border-color: rgb(255, 0, 0);
 } 
 
 
@@ -380,7 +380,7 @@ body{
     flex-direction: column;
 }
   
-.stars-cofreRojo {
+.class-cofreRojo {
     position: relative;
     width: 90%;
     display: flex;
@@ -399,8 +399,8 @@ body{
     position: absolute;
     top: .5%;
     right: 5.5%;
-    background-color: rgb(180, 252, 174);
-    filter: drop-shadow(0 0 8px rgba(79, 250, 79, 0.993));
+    background-color: rgb(252, 174, 174);
+    filter: drop-shadow(0 0 8px rgba(255, 0, 0, 0.993));
     user-select: none;
 }
 
@@ -430,7 +430,7 @@ body{
     height: 80%;
     border-radius: 15px;
     border: 4px solid black;
-    filter: drop-shadow(0px 0px 10px rgb(61, 255, 2));
+    filter: drop-shadow(0px 0px 10px rgb(255, 2, 2));
     background-color: rgb(0, 0, 0);
     z-index: 20;
     display: none;
@@ -443,10 +443,10 @@ body{
     top: 2%;
     font-weight: bold;
     font-size: 6rem;
-    color: greenyellow;
+    color: rgb(255, 47, 47);
     cursor: pointer;
     user-select: none;
-    filter: drop-shadow(0 0 3px green);
+    filter: drop-shadow(0 0 3px rgb(128, 0, 0));
     transition: all .6s ease-in-out;
 }
 
@@ -456,8 +456,8 @@ body{
     font-size: 5.6rem;
 }
 
-.stars-cofreRojo img{
-    width: 100%;
+.class-cofreRojo img{
+    width: 88%;
     height: 100%;
     object-fit: cover;
 }
@@ -488,7 +488,7 @@ body{
 }
 
 .character1-rojo:hover{
-    filter: drop-shadow(0px 0px 10px rgb(51, 255, 0));
+    filter: drop-shadow(0px 0px 10px rgb(255, 0, 0));
     transition: all 0.25s ease-in-out;
 }
 
@@ -503,7 +503,7 @@ body{
 }
 
 .character2-rojo:hover{
-    filter: drop-shadow(0px 0px 10px rgb(51, 255, 0));
+    filter: drop-shadow(0px 0px 10px rgb(255, 0, 0));
     transition: all 0.25s ease-in-out;
 }
 
@@ -517,7 +517,7 @@ body{
 }
 
 .character3-rojo:hover{
-    filter: drop-shadow(0px 0px 10px rgb(43, 255, 0));
+    filter: drop-shadow(0px 0px 10px rgb(255, 0, 0));
     transition: all 0.25s ease-in-out;
 }
 
@@ -533,7 +533,9 @@ body{
 }
 
 
-.character1-grande-rojo{
+/* character 1 stars */
+
+.character1-grande-rojo-3stars{
     position: absolute;
     top: 5%;
     left: 50%;
@@ -541,10 +543,32 @@ body{
     width: 90%;
     z-index: 3;
     filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
-
 }
 
-.character2-grande-rojo{
+.character1-grande-rojo-2stars{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 90%;
+    z-index: 3;
+    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+}
+
+.character1-grande-rojo-1stars{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 90%;
+    z-index: 3;
+    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+}
+
+
+/* character 2 stars */
+
+.character2-grande-rojo-3stars{
     position: absolute;
     top: 5%;
     left: 50%;
@@ -552,10 +576,31 @@ body{
     width: 90%;
     z-index: 2;
     filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
-
 }
 
-.character3-grande-rojo{
+.character2-grande-rojo-2stars{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 90%;
+    z-index: 2;
+    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+}
+
+.character2-grande-rojo-1stars{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 90%;
+    z-index: 2;
+    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+}
+
+/* character 3 stars */
+
+.character3-grande-rojo-3stars{
     position: absolute;
     top: 5%;
     left: 50%;
@@ -563,8 +608,29 @@ body{
     width: 90%;
     z-index: 1;
     filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
-
 }
+
+.character3-grande-rojo-2stars{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 90%;
+    z-index: 1;
+    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+}
+
+.character3-grande-rojo-1stars{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 90%;
+    z-index: 1;
+    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+}
+
+
 
 .character1-grande-rojo img{
     width: 100%;
@@ -576,6 +642,95 @@ body{
     width: 100%;
 }
 
+.stars-cofreRojo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 60%;
+}
+
+.stars-cofreRojo img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.star1-rojo{
+    width: 9%;
+    position: absolute;
+    left: 25%;
+    cursor: pointer;
+    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+}
+
+.star1-rojo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.star1-rojo:hover{
+    filter: drop-shadow(0px 0px 10px rgb(255, 0, 0));
+    transition: all 0.25s ease-in-out;
+}
+
+.star1-rojo:active{
+    width: 8.5%;
+}
+
+
+.star2-rojo{
+    width: 13%;
+    position: absolute;
+    left: 45.5%;
+    transform: translate(-50%);
+    cursor: pointer;
+    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+}
+
+.star2-rojo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.star2-rojo:active{
+    width: 12.5%;
+}
+
+
+.star2-rojo:hover{
+    filter: drop-shadow(0px 0px 10px rgb(255, 0, 0));
+    transition: all 0.25s ease-in-out;
+}
+
+
+.star3-rojo{
+    width: 19%;
+    position: absolute;
+    right: 15%;
+    transform: translate(-50%);
+    cursor: pointer;
+    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+}
+
+.star3-rojo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.star3-rojo:hover{
+    filter: drop-shadow(0px 0px 10px rgb(255, 0, 0));
+    transition: all 0.25s ease-in-out;
+}
+
+.star3-rojo:active{
+    width: 18.5%;
+}
 
 
 /* cofre gris */
@@ -632,7 +787,7 @@ body{
     font-size: 3.5rem;
     color: white;
     background-color: rgb(13, 13, 14);
-    border-color: rgba(153, 255, 0, 0.356);
+    border-color: rgba(230, 230, 230, 0.356);
     letter-spacing: 1px;
     font-weight: bold;
     border-top-left-radius: 15px;
@@ -648,7 +803,7 @@ body{
     width: 14.5rem;
     height: 6.5rem;
     font-size: 3rem;
-    border-color: rgb(153, 255, 0);
+    border-color: rgb(235, 235, 235);
 } 
 
 
@@ -674,7 +829,7 @@ body{
     flex-direction: column;
 }
   
-.stars-cofreGris {
+.class-cofreGris {
     position: relative;
     width: 90%;
     display: flex;
@@ -684,6 +839,13 @@ body{
     align-items: center;
     filter: drop-shadow(0px 0px 10px rgb(0, 2, 0));
 }
+
+.class-cofreGris img{
+    width: 88%;
+    height: 100%;
+    object-fit: cover;
+}
+
 
 .saberMas-gris{
     width: 5rem;
@@ -869,6 +1031,101 @@ body{
 
 
 
+.stars-cofreGris{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 60%;
+}
+
+.stars-cofreGris img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.star1-gris{
+    width: 9%;
+    position: absolute;
+    left: 25%;
+    cursor: pointer;
+    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+}
+
+.star1-gris img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.star1-gris:hover{
+    filter: drop-shadow(0px 0px 10px rgb(43, 255, 0));
+    transition: all 0.25s ease-in-out;
+}
+
+.star1-gris:active{
+    width: 8.5%;
+}
+
+
+.star2-gris{
+    width: 13%;
+    position: absolute;
+    left: 45.5%;
+    transform: translate(-50%);
+    cursor: pointer;
+    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+}
+
+.star2-gris img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.star2-gris:active{
+    width: 12.5%;
+}
+
+
+.star2-gris:hover{
+    filter: drop-shadow(0px 0px 10px rgb(43, 255, 0));
+    transition: all 0.25s ease-in-out;
+}
+
+
+.star3-gris{
+    width: 19%;
+    position: absolute;
+    right: 15%;
+    transform: translate(-50%);
+    cursor: pointer;
+    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+}
+
+.star3-gris img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.star3-gris:hover{
+    filter: drop-shadow(0px 0px 10px rgb(43, 255, 0));
+    transition: all 0.25s ease-in-out;
+}
+
+.star3-gris:active{
+    width: 18.5%;
+}
+
+
+
+
+
+
 /* cofre verde */
 
 
@@ -877,7 +1134,7 @@ body{
     position: fixed;
     width: 100vw;
     height: 100vh;
-    background-image: url("./src/cofres/backgroundCofres.png");
+    background-image: url("./src/cofre verde/backgroundCofreVerde.png");
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 0;
@@ -966,7 +1223,7 @@ body{
     flex-direction: column;
 }
   
-.stars-cofreVerde {
+.class-cofreVerde {
     position: relative;
     width: 90%;
     display: flex;
@@ -977,11 +1234,12 @@ body{
     filter: drop-shadow(0px 0px 10px rgb(0, 2, 0));
 }
 
-.stars-cofreVerde img{
-    width: 100%;
+.class-cofreVerde img{
+    width: 88%;
     height: 100%;
     object-fit: cover;
 }
+
 
 
 .saberMas-verde{
@@ -1162,6 +1420,100 @@ body{
 }
 
 
+
+.stars-cofreVerde{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 60%;
+}
+
+.stars-cofreVerde img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.star1-verde{
+    width: 9%;
+    position: absolute;
+    left: 25%;
+    cursor: pointer;
+    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+}
+
+.star1-verde img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.star1-verde:hover{
+    filter: drop-shadow(0px 0px 10px rgb(43, 255, 0));
+    transition: all 0.25s ease-in-out;
+}
+
+.star1-verde:active{
+    width: 8.5%;
+}
+
+
+.star2-verde{
+    width: 13%;
+    position: absolute;
+    left: 45.5%;
+    transform: translate(-50%);
+    cursor: pointer;
+    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+}
+
+.star2-verde img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.star2-verde:active{
+    width: 12.5%;
+}
+
+
+.star2-verde:hover{
+    filter: drop-shadow(0px 0px 10px rgb(43, 255, 0));
+    transition: all 0.25s ease-in-out;
+}
+
+
+.star3-verde{
+    width: 19%;
+    position: absolute;
+    right: 15%;
+    transform: translate(-50%);
+    cursor: pointer;
+    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+}
+
+.star3-verde img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.star3-verde:hover{
+    filter: drop-shadow(0px 0px 10px rgb(43, 255, 0));
+    transition: all 0.25s ease-in-out;
+}
+
+.star3-verde:active{
+    width: 18.5%;
+}
+
+
+
+
 /* cofre DIAMANTE */
 
 
@@ -1170,7 +1522,7 @@ body{
     position: fixed;
     width: 100vw;
     height: 100vh;
-    background-image: url("./src/cofres/backgroundCofres.png");
+    background-image: url("./src/cofre diamante/backgroundCofreDiamante.png");
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 0;
@@ -1216,7 +1568,7 @@ body{
     font-size: 3.5rem;
     color: white;
     background-color: rgb(13, 13, 14);
-    border-color: rgba(153, 255, 0, 0.356);
+    border-color: rgb(0, 225, 255);
     letter-spacing: 1px;
     font-weight: bold;
     border-top-left-radius: 15px;
@@ -1233,7 +1585,7 @@ body{
     width: 14.5rem;
     height: 6.5rem;
     font-size: 3rem;
-    border-color: rgb(153, 255, 0);
+    border-color: rgb(0, 225, 255);
 } 
 
 
@@ -1259,7 +1611,7 @@ body{
     flex-direction: column;
 }
   
-.stars-cofreDiamante {
+.class-cofreDiamante {
     position: relative;
     width: 90%;
     display: flex;
@@ -1270,11 +1622,12 @@ body{
     filter: drop-shadow(0px 0px 10px rgb(0, 2, 0));
 }
 
-.stars-cofreDiamante img{
-    width: 100%;
+.class-cofreDiamante img{
+    width: 88%;
     height: 100%;
     object-fit: cover;
 }
+
 
 
 .saberMas-diamante{
@@ -1285,8 +1638,8 @@ body{
     position: absolute;
     top: .5%;
     right: 5.5%;
-    background-color: rgb(180, 252, 174);
-    filter: drop-shadow(0 0 8px rgba(79, 250, 79, 0.993));
+    background-color:rgba(0, 225, 255, 0.664);
+    filter: drop-shadow(0 0 10px rgb(0, 225, 255));
     user-select: none;
 }
 
@@ -1316,7 +1669,7 @@ body{
     height: 80%;
     border-radius: 15px;
     border: 4px solid black;
-    filter: drop-shadow(0px 0px 10px rgb(61, 255, 2));
+    filter: drop-shadow(0px 0px 10px rgb(0, 225, 255));
     background-color: rgb(0, 0, 0);
     z-index: 20;
     display: none;
@@ -1329,10 +1682,10 @@ body{
     top: 2%;
     font-weight: bold;
     font-size: 6rem;
-    color: greenyellow;
+    color: rgb(0, 225, 255);
     cursor: pointer;
     user-select: none;
-    filter: drop-shadow(0 0 3px green);
+    filter: drop-shadow(0 0 3px rgb(0, 225, 255));
     transition: all .6s ease-in-out;
 }
 
@@ -1369,7 +1722,7 @@ body{
 }
 
 .character1-diamante:hover{
-    filter: drop-shadow(0px 0px 10px rgb(51, 255, 0));
+    filter: drop-shadow(0px 0px 10px rgb(0, 225, 255));
     transition: all 0.25s ease-in-out;
 }
 
@@ -1384,7 +1737,7 @@ body{
 }
 
 .character2-diamante:hover{
-    filter: drop-shadow(0px 0px 10px rgb(51, 255, 0));
+    filter: drop-shadow(0px 0px 10px rgb(0, 225, 255));
     transition: all 0.25s ease-in-out;
 }
 
@@ -1398,7 +1751,7 @@ body{
 }
 
 .character3-diamante:hover{
-    filter: drop-shadow(0px 0px 10px rgb(43, 255, 0));
+    filter: drop-shadow(0px 0px 10px rgb(0, 225, 255));
     transition: all 0.25s ease-in-out;
 }
 
@@ -1453,6 +1806,98 @@ body{
 .character3-grande-diamante img{
     width: 100%;
 }
+
+
+.stars-cofreDiamante{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 60%;
+}
+
+.stars-cofreDiamante img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.star1-diamante{
+    width: 9%;
+    position: absolute;
+    left: 25%;
+    cursor: pointer;
+    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+}
+
+.star1-diamante img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.star1-diamante:hover{
+    filter: drop-shadow(0px 0px 10px rgb(0, 225, 255));
+    transition: all 0.25s ease-in-out;
+}
+
+.star1-diamante:active{
+    width: 8.5%;
+}
+
+
+.star2-diamante{
+    width: 13%;
+    position: absolute;
+    left: 45.5%;
+    transform: translate(-50%);
+    cursor: pointer;
+    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+}
+
+.star2-diamante img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.star2-diamante:active{
+    width: 12.5%;
+}
+
+
+.star2-diamante:hover{
+    filter: drop-shadow(0px 0px 10px rgb(0, 225, 255));
+    transition: all 0.25s ease-in-out;
+}
+
+
+.star3-diamante{
+    width: 19%;
+    position: absolute;
+    right: 15%;
+    transform: translate(-50%);
+    cursor: pointer;
+    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+}
+
+.star3-diamante img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.star3-diamante:hover{
+    filter: drop-shadow(0px 0px 10px rgb(0, 225, 255));
+    transition: all 0.25s ease-in-out;
+}
+
+.star3-diamante:active{
+    width: 18.5%;
+}
+
 
 
 /* container 4 */

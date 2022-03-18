@@ -5,6 +5,9 @@
 let cofreVerde = document.querySelector(".container3__button-cofre-verde");
 
 cofreVerde.addEventListener("click", function(){
+    gsap.set(".header",{
+        display:"none"
+    })
 
     gsap.timeline()
     .to("body",{
@@ -96,6 +99,10 @@ flecha__backVerde.addEventListener("click", function(){
         overflow:"visible",
     })
 
+    gsap.set(".header",{
+        display:"inline-block"
+    })
+
 })    
 
 })();
@@ -163,6 +170,8 @@ character3.addEventListener("click", function(){
         duration:2,
         opacity:1,
     })
+
+  
 
 });
 
