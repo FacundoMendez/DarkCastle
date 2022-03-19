@@ -562,8 +562,8 @@ body{
 
 .character1-grande-rojo-3stars{
     position: absolute;
-    top: 5%;
-    left: 50%;
+    top: 5.3%;
+    left: 50.5%;
     transform: translate(-50%);
     width: 90%;
     z-index: 3;
@@ -572,7 +572,7 @@ body{
 .character1-grande-rojo-2stars{
     position: absolute;
     top: 5%;
-    left: 50%;
+    left: 50.5%;
     transform: translate(-50%);
     width: 90%;
     opacity: 0;
@@ -581,7 +581,7 @@ body{
 .character1-grande-rojo-1stars{
     position: absolute;
     top: 5%;
-    left: 50%;
+    left: 50.5%;
     transform: translate(-50%);
     width: 90%;
     opacity: 0;
@@ -591,37 +591,35 @@ body{
 
 /* character 2 stars */
 
+
 .character2-grande-rojo-3stars{
     position: absolute;
-    top: 5.2%;
+    top: 5%;
     left: 50.5%;
     transform: translate(-50%);
     width: 90%;
     z-index: 2;
     opacity: 0;
-
 }
 
 .character2-grande-rojo-2stars{
     position: absolute;
     top: 5%;
-    left: 50%;
+    left: 50.5%;
     transform: translate(-50%);
     width: 90%;
     z-index: 2;
     opacity: 0;
-
 }
 
 .character2-grande-rojo-1stars{
     position: absolute;
     top: 5%;
-    left: 50%;
+    left: 50.5%;
     transform: translate(-50%);
     width: 90%;
     z-index: 2;
     opacity: 0;
-
 }
 
 /* character 3 stars */
@@ -629,36 +627,32 @@ body{
 .character3-grande-rojo-3stars{
     position: absolute;
     top: 5%;
-    left: 50%;
+    left: 50.6%;
     transform: translate(-50%);
     width: 90%;
     z-index: 1;
     opacity: 0;
-
 }
 
 .character3-grande-rojo-2stars{
     position: absolute;
-    top: 5%;
-    left: 50%;
+    top: 5.1%;
+    left: 50.5%;
     transform: translate(-50%);
     width: 90%;
     z-index: 1;
     opacity: 0;
-
 }
 
 .character3-grande-rojo-1stars{
     position: absolute;
     top: 5%;
-    left: 50%;
+    left: 50.5%;
     transform: translate(-50%);
     width: 90%;
     z-index: 1;
     opacity: 0;
-
 }
-
 
 
 .character1-grande-rojo img{
@@ -1069,7 +1063,7 @@ body{
 
 }
 
-.character2-verde:hover{
+.character2-gris:hover{
     filter: drop-shadow(0px 0px 10px rgb(240, 240, 240));
     transition: all 0.25s ease-in-out;
 }
@@ -1107,7 +1101,7 @@ body{
 .character1-grande-gris-3stars{
     position: absolute;
     top: 5%;
-    left: 50%;
+    left: 50.5%;
     transform: translate(-50%);
     width: 90%;
     z-index: 3;
@@ -1116,7 +1110,7 @@ body{
 .character1-grande-gris-2stars{
     position: absolute;
     top: 5%;
-    left: 50%;
+    left: 50.5%;
     transform: translate(-50%);
     width: 90%;
     opacity: 0;
@@ -1125,7 +1119,7 @@ body{
 .character1-grande-gris-1stars{
     position: absolute;
     top: 5%;
-    left: 50%;
+    left: 50.5%;
     transform: translate(-50%);
     width: 90%;
     opacity: 0;
@@ -1135,37 +1129,35 @@ body{
 
 /* character 2 stars */
 
+
 .character2-grande-gris-3stars{
     position: absolute;
     top: 5.2%;
+    left: 50.6%;
+    transform: translate(-50%);
+    width: 90%;
+    z-index: 2;
+    opacity: 0;
+}
+
+.character2-grande-gris-2stars{
+    position: absolute;
+    top: 5.1%;
+    left: 50.6%;
+    transform: translate(-50%);
+    width: 90%;
+    z-index: 2;
+    opacity: 0;
+}
+
+.character2-grande-gris-1stars{
+    position: absolute;
+    top: 5.5%;
     left: 50.5%;
     transform: translate(-50%);
     width: 90%;
     z-index: 2;
     opacity: 0;
-
-}
-
-.character2-grande-gris-2stars{
-    position: absolute;
-    top: 5%;
-    left: 50%;
-    transform: translate(-50%);
-    width: 90%;
-    z-index: 2;
-    opacity: 0;
-
-}
-
-.character2-grande-gris-1stars{
-    position: absolute;
-    top: 5%;
-    left: 50%;
-    transform: translate(-50%);
-    width: 90%;
-    z-index: 2;
-    opacity: 0;
-
 }
 
 /* character 3 stars */
@@ -1173,35 +1165,33 @@ body{
 .character3-grande-gris-3stars{
     position: absolute;
     top: 5%;
-    left: 50%;
+    left: 50.5%;
     transform: translate(-50%);
     width: 90%;
     z-index: 1;
     opacity: 0;
-
 }
 
 .character3-grande-gris-2stars{
     position: absolute;
-    top: 5%;
-    left: 50%;
+    top: 5.1%;
+    left: 50.5%;
     transform: translate(-50%);
     width: 90%;
     z-index: 1;
     opacity: 0;
-
 }
 
 .character3-grande-gris-1stars{
     position: absolute;
-    top: 5%;
-    left: 50%;
+    top: 5.2%;
+    left: 50.5%;
     transform: translate(-50%);
     width: 90%;
     z-index: 1;
     opacity: 0;
-
 }
+
 
 
 
@@ -1448,7 +1438,6 @@ body{
     filter: contrast(118%) brightness(145%) drop-shadow(0 0 20px rgb(74, 226, 54));
     background-image: url("./src/cofre verde/Buy It.png");
     background-size: contain;
-
 }
 
 .buttonBuy-cofreVerde button:active{
@@ -1562,21 +1551,26 @@ body{
     width: 88%;
     height: 100%;
     object-fit: cover;
+    transition: all .5s ease-in-out;
+
 }
 
 .character1-verde img{
     width: 100%;
     filter: contrast(115%) brightness(105%) ;
+    transition: all .5s ease-in-out;
 
 }
 .character2-verde img{
     width: 100%;
     filter: contrast(115%) brightness(105%) ;
+    transition: all .5s ease-in-out;
 
 }
 .character3-verde img{
     width: 100%;
     filter: contrast(115%) brightness(105%) ;
+    transition: all .5s ease-in-out;
 
 }
 
@@ -1593,6 +1587,8 @@ body{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: all .5s ease-in-out;
+
 }
 
 .character1-verde:hover{
@@ -1640,6 +1636,7 @@ body{
 .characterStats-cofreVerde img{
     width: 100%;
     height: 95%;
+    transition: all .5s ease-in-out;
 
 }
 
@@ -1649,7 +1646,7 @@ body{
 .character1-grande-verde-3stars{
     position: absolute;
     top: 5%;
-    left: 50%;
+    left: 50.5%;
     transform: translate(-50%);
     width: 90%;
     z-index: 3;
@@ -1658,7 +1655,7 @@ body{
 .character1-grande-verde-2stars{
     position: absolute;
     top: 5%;
-    left: 50%;
+    left: 50.5%;
     transform: translate(-50%);
     width: 90%;
     opacity: 0;
@@ -1667,7 +1664,7 @@ body{
 .character1-grande-verde-1stars{
     position: absolute;
     top: 5%;
-    left: 50%;
+    left: 50.5%;
     transform: translate(-50%);
     width: 90%;
     opacity: 0;
@@ -1677,7 +1674,28 @@ body{
 
 /* character 2 stars */
 
+
 .character2-grande-verde-3stars{
+    position: absolute;
+    top: 5%;
+    left: 50.5%;
+    transform: translate(-50%);
+    width: 90%;
+    z-index: 2;
+    opacity: 0;
+}
+
+.character2-grande-verde-2stars{
+    position: absolute;
+    top: 5.1%;
+    left: 50.4%;
+    transform: translate(-50%);
+    width: 90%;
+    z-index: 2;
+    opacity: 0;
+}
+
+.character2-grande-verde-1stars{
     position: absolute;
     top: 5.2%;
     left: 50.5%;
@@ -1685,64 +1703,38 @@ body{
     width: 90%;
     z-index: 2;
     opacity: 0;
-
-}
-
-.character2-grande-verde-2stars{
-    position: absolute;
-    top: 5%;
-    left: 50%;
-    transform: translate(-50%);
-    width: 90%;
-    z-index: 2;
-    opacity: 0;
-
-}
-
-.character2-grande-verde-1stars{
-    position: absolute;
-    top: 5%;
-    left: 50%;
-    transform: translate(-50%);
-    width: 90%;
-    z-index: 2;
-    opacity: 0;
-
 }
 
 /* character 3 stars */
 
 .character3-grande-verde-3stars{
     position: absolute;
-    top: 5%;
-    left: 50%;
+    top: 4.6%;
+    left: 50.5%;
     transform: translate(-50%);
     width: 90%;
     z-index: 1;
     opacity: 0;
-
 }
 
 .character3-grande-verde-2stars{
     position: absolute;
-    top: 5%;
-    left: 50%;
+    top: 5.1%;
+    left: 50.5%;
     transform: translate(-50%);
     width: 90%;
     z-index: 1;
     opacity: 0;
-
 }
 
 .character3-grande-verde-1stars{
     position: absolute;
-    top: 5%;
-    left: 50%;
+    top: 5.2%;
+    left: 50.5%;
     transform: translate(-50%);
     width: 90%;
     z-index: 1;
     opacity: 0;
-
 }
 
 
@@ -1750,14 +1742,20 @@ body{
 .character1-grande-verde img{
     width: 100%;
     filter: contrast(115%) brightness(105%) ;
+    transition: all .5s ease-in-out;
+
 }
 .character2-grande-verde img{
     width: 100%;
     filter: contrast(115%) brightness(105%) ;
+    transition: all .5s ease-in-out;
+
 }
 .character3-grande-verde img{
     width: 100%;
     filter: contrast(115%) brightness(105%) ;
+    transition: all .5s ease-in-out;
+
 }
 
 .stars-cofreVerde{
@@ -1773,6 +1771,8 @@ body{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: all .5s ease-in-out;
+
 }
 
 
@@ -1789,6 +1789,8 @@ body{
     height: 100%;
     filter: contrast(115%) brightness(105%) ;
     object-fit: cover;
+    transition: all .5s ease-in-out;
+
 }
 
 .star1-verde:hover{
@@ -1815,6 +1817,8 @@ body{
     height: 100%;
     object-fit: cover;
     filter: contrast(115%) brightness(105%) ;
+    transition: all .5s ease-in-out;
+
 }
 
 .star2-verde:active{
@@ -1842,6 +1846,8 @@ body{
     height: 100%;
     filter: contrast(115%) brightness(105%) ;
     object-fit: cover;
+    transition: all .5s ease-in-out;
+
 }
 
 .star3-verde:hover{
@@ -1937,7 +1943,7 @@ body{
     opacity: 0;
     z-index: 5;
     display: none;
-    filter: contrast(108%) brightness(115%) ;
+    filter: contrast(110%) brightness(115%) ;
 }
 
 .contenedor__cofreDiamante{
@@ -2186,13 +2192,12 @@ body{
 
 }
 
-
 /* character 1 stars */
 
 .character1-grande-diamante-3stars{
     position: absolute;
-    top: 5%;
-    left: 50%;
+    top: 5.2%;
+    left: 50.5%;
     transform: translate(-50%);
     width: 90%;
     z-index: 3;
@@ -2200,8 +2205,8 @@ body{
 
 .character1-grande-diamante-2stars{
     position: absolute;
-    top: 5%;
-    left: 50%;
+    top: 5.2%;
+    left: 50.5%;
     transform: translate(-50%);
     width: 90%;
     opacity: 0;
@@ -2209,8 +2214,8 @@ body{
 
 .character1-grande-diamante-1stars{
     position: absolute;
-    top: 5%;
-    left: 50%;
+    top: 5.2%;
+    left: 50.6%;
     transform: translate(-50%);
     width: 90%;
     opacity: 0;
@@ -2220,7 +2225,28 @@ body{
 
 /* character 2 stars */
 
+
 .character2-grande-diamante-3stars{
+    position: absolute;
+    top: 5%;
+    left: 50.5%;
+    transform: translate(-50%);
+    width: 90%;
+    z-index: 2;
+    opacity: 0;
+}
+
+.character2-grande-diamante-2stars{
+    position: absolute;
+    top: 5.1%;
+    left: 50.4%;
+    transform: translate(-50%);
+    width: 90%;
+    z-index: 2;
+    opacity: 0;
+}
+
+.character2-grande-diamante-1stars{
     position: absolute;
     top: 5.2%;
     left: 50.5%;
@@ -2228,64 +2254,38 @@ body{
     width: 90%;
     z-index: 2;
     opacity: 0;
-
-}
-
-.character2-grande-diamante-2stars{
-    position: absolute;
-    top: 5%;
-    left: 50%;
-    transform: translate(-50%);
-    width: 90%;
-    z-index: 2;
-    opacity: 0;
-
-}
-
-.character2-grande-diamante-1stars{
-    position: absolute;
-    top: 5%;
-    left: 50%;
-    transform: translate(-50%);
-    width: 90%;
-    z-index: 2;
-    opacity: 0;
-
 }
 
 /* character 3 stars */
 
 .character3-grande-diamante-3stars{
     position: absolute;
-    top: 5%;
-    left: 50%;
+    top: 5.2%;
+    left: 50.5%;
     transform: translate(-50%);
     width: 90%;
     z-index: 1;
     opacity: 0;
-
 }
 
 .character3-grande-diamante-2stars{
     position: absolute;
-    top: 5%;
-    left: 50%;
+    top: 5.1%;
+    left: 50.5%;
     transform: translate(-50%);
     width: 90%;
     z-index: 1;
     opacity: 0;
-
 }
 
 .character3-grande-diamante-1stars{
     position: absolute;
-    top: 5%;
-    left: 50%;
+    top: 5.2%;
+    left: 50.5%;
     transform: translate(-50%);
     width: 90%;
     z-index: 1;
     opacity: 0;
-
 }
 
 
