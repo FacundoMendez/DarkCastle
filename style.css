@@ -81,6 +81,8 @@ body{
     width:100vw;
     height: 100vh;
     object-fit: cover;
+    filter: contrast(130%) brightness(125%) ;
+
 }
 
 
@@ -155,7 +157,8 @@ body{
 .nav-img img{
     width: 100%;
     object-fit: cover;
-    filter: drop-shadow(0 0 20px rgba(192, 150, 240, 0.993));
+    filter: contrast(110%) brightness(115%) drop-shadow(0 0 20px rgba(180, 113, 255, 0.493));
+
 }
 
 
@@ -183,6 +186,8 @@ body{
     height: 100%;
     object-fit: cover;
     filter: contrast(105%);
+    filter: contrast(110%) brightness(115%) ;
+
 }
 
 
@@ -225,6 +230,8 @@ body{
     object-fit: cover;
     width: 100%;
     height: 100%;
+    filter: contrast(118%) brightness(125%);
+
 }
 
 .container3__ojos{
@@ -241,6 +248,8 @@ body{
 .container3__ojos img{
     width: 100%;
     height: 100%;
+    filter: contrast(119%) brightness(170%) ;
+
 }
 
 /* tesoro */
@@ -258,6 +267,8 @@ body{
     object-fit: cover;
     width: 100vw;
     height: 100vh;
+    filter: contrast(112%) brightness(120%) ;
+
 }
 
 .container3__buttons{
@@ -297,6 +308,7 @@ body{
     opacity: 0;
     z-index: 5;
     display: none;
+    filter: contrast(108%) brightness(115%) ;
 }
 
 .contenedor__cofreRojo{
@@ -325,14 +337,15 @@ body{
 .flecha__back-rojo img{
     width: 100%;
     height: 100%;
+    filter: contrast(109%) brightness(115%) ;
 
 }
 
 
 /* button buy cofre */
 .buttonBuy-cofreRojo button{
-    width: 15rem;
-    height: 7rem;
+    width: 17rem;
+    height: 8rem;
     cursor: pointer;
     font-size: 3.5rem;
     color: white;
@@ -340,21 +353,22 @@ body{
     border-color: rgba(255, 0, 0, 0.356);
     letter-spacing: 1px;
     font-weight: bold;
-    border-top-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    bottom: 8rem;
+    bottom: 7rem;
     left: 55%;
+    border-radius: 15px;
     transform: translate(-50%);
+    border: none;
     position: absolute;
-    filter: drop-shadow(0 0 30px rgb(254, 255, 254));
+    filter: contrast(106%) brightness(125%) drop-shadow(0 0 20px rgb(226, 54, 54));
+    background-image: url("./src/cofre rojo/Buy It.png");
+    background-size: contain;
 
 }
 
 .buttonBuy-cofreRojo button:active{
-    width: 14.5rem;
-    height: 6.5rem;
-    font-size: 3rem;
-    border-color: rgb(255, 0, 0);
+    width: 16.5rem;
+    height: 7.8rem;
+    border-color: rgb(170, 39, 39);
 } 
 
 
@@ -378,11 +392,12 @@ body{
     align-items: center;
     flex-wrap: nowrap;
     flex-direction: column;
+    gap: 2.5rem;
 }
   
 .class-cofreRojo {
     position: relative;
-    width: 90%;
+    width: 80%;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -397,8 +412,8 @@ body{
     cursor:pointer;
     border-radius: 100%;
     position: absolute;
-    top: .5%;
-    right: 5.5%;
+    top: -6%;
+    right: 5%;
     background-color: rgb(252, 174, 174);
     filter: drop-shadow(0 0 8px rgba(255, 0, 0, 0.993));
     user-select: none;
@@ -456,6 +471,7 @@ body{
     font-size: 5.6rem;
 }
 
+
 .class-cofreRojo img{
     width: 88%;
     height: 100%;
@@ -464,12 +480,18 @@ body{
 
 .character1-rojo img{
     width: 100%;
+    filter: contrast(115%) brightness(105%) ;
+
 }
 .character2-rojo img{
     width: 100%;
+    filter: contrast(115%) brightness(105%) ;
+
 }
 .character3-rojo img{
     width: 100%;
+    filter: contrast(115%) brightness(105%) ;
+
 }
 
 
@@ -478,7 +500,7 @@ body{
     position: absolute;
     left: 10%;
     cursor: pointer;
-    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+    filter: drop-shadow(0px 0px 20px rgba(255, 0, 0, 0.233));
 }
 
 .character1-rojo img{
@@ -499,7 +521,8 @@ body{
     left: 50%;
     transform: translate(-50%);
     cursor: pointer;
-    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+    filter: drop-shadow(0px 0px 20px rgba(255, 0, 0, 0.233));
+
 }
 
 .character2-rojo:hover{
@@ -513,7 +536,8 @@ body{
     position: absolute;
     right: 10%;
     cursor: pointer;
-    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+    filter: drop-shadow(0px 0px 20px rgba(255, 0, 0, 0.233));
+
 }
 
 .character3-rojo:hover{
@@ -524,12 +548,13 @@ body{
 
 .characterStats-cofreRojo {
     position: relative;
-    width: 80%;
+    width: 70%;
 }
 
 .characterStats-cofreRojo img{
     width: 100%;
-    height: 100%;
+    height: 95%;
+
 }
 
 
@@ -542,7 +567,6 @@ body{
     transform: translate(-50%);
     width: 90%;
     z-index: 3;
-    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
 }
 
 .character1-grande-rojo-2stars{
@@ -551,8 +575,7 @@ body{
     left: 50%;
     transform: translate(-50%);
     width: 90%;
-    z-index: 3;
-    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+    opacity: 0;
 }
 
 .character1-grande-rojo-1stars{
@@ -561,8 +584,8 @@ body{
     left: 50%;
     transform: translate(-50%);
     width: 90%;
-    z-index: 3;
-    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+    opacity: 0;
+
 }
 
 
@@ -570,12 +593,13 @@ body{
 
 .character2-grande-rojo-3stars{
     position: absolute;
-    top: 5%;
-    left: 50%;
+    top: 5.2%;
+    left: 50.5%;
     transform: translate(-50%);
     width: 90%;
     z-index: 2;
-    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+    opacity: 0;
+
 }
 
 .character2-grande-rojo-2stars{
@@ -585,7 +609,8 @@ body{
     transform: translate(-50%);
     width: 90%;
     z-index: 2;
-    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+    opacity: 0;
+
 }
 
 .character2-grande-rojo-1stars{
@@ -595,7 +620,8 @@ body{
     transform: translate(-50%);
     width: 90%;
     z-index: 2;
-    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+    opacity: 0;
+
 }
 
 /* character 3 stars */
@@ -607,7 +633,8 @@ body{
     transform: translate(-50%);
     width: 90%;
     z-index: 1;
-    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+    opacity: 0;
+
 }
 
 .character3-grande-rojo-2stars{
@@ -617,7 +644,8 @@ body{
     transform: translate(-50%);
     width: 90%;
     z-index: 1;
-    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+    opacity: 0;
+
 }
 
 .character3-grande-rojo-1stars{
@@ -627,19 +655,23 @@ body{
     transform: translate(-50%);
     width: 90%;
     z-index: 1;
-    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+    opacity: 0;
+
 }
 
 
 
 .character1-grande-rojo img{
     width: 100%;
+    filter: contrast(115%) brightness(105%) ;
 }
 .character2-grande-rojo img{
     width: 100%;
+    filter: contrast(115%) brightness(105%) ;
 }
 .character3-grande-rojo img{
     width: 100%;
+    filter: contrast(115%) brightness(105%) ;
 }
 
 .stars-cofreRojo{
@@ -647,7 +679,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    width: 60%;
+    width: 50%;
 }
 
 .stars-cofreRojo img{
@@ -659,9 +691,9 @@ body{
 
 
 .star1-rojo{
-    width: 9%;
+    width: 8%;
     position: absolute;
-    left: 25%;
+    left: 31%;
     cursor: pointer;
     filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
 }
@@ -669,6 +701,7 @@ body{
 .star1-rojo img{
     width: 100%;
     height: 100%;
+    filter: contrast(115%) brightness(105%) ;
     object-fit: cover;
 }
 
@@ -678,14 +711,14 @@ body{
 }
 
 .star1-rojo:active{
-    width: 8.5%;
+    width: 7.5%;
 }
 
 
 .star2-rojo{
-    width: 13%;
+    width: 11%;
     position: absolute;
-    left: 45.5%;
+    left: 47%;
     transform: translate(-50%);
     cursor: pointer;
     filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
@@ -695,10 +728,11 @@ body{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: contrast(115%) brightness(105%) ;
 }
 
 .star2-rojo:active{
-    width: 12.5%;
+    width: 10.5%;
 }
 
 
@@ -709,9 +743,9 @@ body{
 
 
 .star3-rojo{
-    width: 19%;
+    width: 15%;
     position: absolute;
-    right: 15%;
+    right: 23%;
     transform: translate(-50%);
     cursor: pointer;
     filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
@@ -720,6 +754,7 @@ body{
 .star3-rojo img{
     width: 100%;
     height: 100%;
+    filter: contrast(115%) brightness(105%) ;
     object-fit: cover;
 }
 
@@ -729,11 +764,80 @@ body{
 }
 
 .star3-rojo:active{
-    width: 18.5%;
+    width: 14.5%;
+}
+
+/* efect elementos */
+
+
+
+
+.character1-rojo {
+    animation-iteration-count: infinite;
+    animation-duration:7000ms;
+    animation-name: slidein;
+}
+.character2-rojo {
+    animation-iteration-count: infinite;
+    animation-duration:7000ms;
+    animation-name: slidein;
+}
+.character3-rojo {
+    animation-iteration-count: infinite;
+    animation-duration:7000ms;
+    animation-name: slidein;
 }
 
 
+.star1-rojo{
+    animation-iteration-count: infinite;
+    animation-duration:7000ms;
+    animation-name: slidein;
+}
+
+.star2-rojo{
+    animation-iteration-count: infinite;
+    animation-duration:7000ms;
+    animation-name: slidein;
+}
+
+
+.star3-rojo{
+    animation-iteration-count: infinite;
+    animation-duration:7000ms;
+    animation-name: slidein;
+}
+
+  
+@keyframes slidein {
+  
+    20% {
+        filter: drop-shadow(1px 1px 10px rgb(226, 69, 69));
+
+    }
+
+    40% {
+        filter: none;
+    }
+  
+    60% {
+        filter: drop-shadow(1px 1px 10px rgb(226, 69, 69));
+    }
+    80% {
+        filter: none;
+    }
+
+    90% {
+        filter: drop-shadow(1px 1px 10px rgb(226, 69, 69));
+        
+    }
+
+}
+
+
+
 /* cofre gris */
+
 
 
 .cofreGris{
@@ -741,12 +845,13 @@ body{
     position: fixed;
     width: 100vw;
     height: 100vh;
-    background-image: url("./src/cofres/backgroundCofres.png");
+    background-image: url("./src/cofre gris/backgroundCofreGris.png");
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 0;
     z-index: 5;
     display: none;
+    filter: contrast(108%) brightness(130%) ;
 }
 
 .contenedor__cofreGris{
@@ -775,35 +880,38 @@ body{
 .flecha__back-gris img{
     width: 100%;
     height: 100%;
+    filter: contrast(109%) brightness(115%) ;
 
 }
 
 
 /* button buy cofre */
 .buttonBuy-cofreGris button{
-    width: 15rem;
-    height: 7rem;
+    width: 17rem;
+    height: 8rem;
     cursor: pointer;
     font-size: 3.5rem;
     color: white;
     background-color: rgb(13, 13, 14);
-    border-color: rgba(230, 230, 230, 0.356);
+    border-color: rgb(240, 240, 240);
     letter-spacing: 1px;
     font-weight: bold;
-    border-top-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    bottom: 8rem;
+    bottom: 7rem;
     left: 55%;
+    border-radius: 15px;
     transform: translate(-50%);
+    border: none;
     position: absolute;
-    filter: drop-shadow(0 0 30px rgb(254, 255, 254));
+    filter: contrast(118%) brightness(145%) drop-shadow(0 0 20px rgb(240, 240, 240));
+    background-image: url("./src/cofre gris/Buy It.png");
+    background-size: contain;
+
 }
 
 .buttonBuy-cofreGris button:active{
-    width: 14.5rem;
-    height: 6.5rem;
-    font-size: 3rem;
-    border-color: rgb(235, 235, 235);
+    width: 16.5rem;
+    height: 7.8rem;
+    border-color: rgb(240, 240, 240);
 } 
 
 
@@ -827,25 +935,20 @@ body{
     align-items: center;
     flex-wrap: nowrap;
     flex-direction: column;
+    gap: 2.5rem;
 }
   
-.class-cofreGris {
+.class-cofreGris{
     position: relative;
-    width: 90%;
+    width: 80%;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
     filter: drop-shadow(0px 0px 10px rgb(0, 2, 0));
-}
 
-.class-cofreGris img{
-    width: 88%;
-    height: 100%;
-    object-fit: cover;
 }
-
 
 .saberMas-gris{
     width: 5rem;
@@ -853,10 +956,10 @@ body{
     cursor:pointer;
     border-radius: 100%;
     position: absolute;
-    top: .5%;
-    right: 5.5%;
-    background-color: rgb(180, 252, 174);
-    filter: drop-shadow(0 0 8px rgba(79, 250, 79, 0.993));
+    top: -6%;
+    right: 5%;
+    background-color: rgb(219, 219, 219);
+    filter: drop-shadow(0 0 8px rgb(240, 240, 240));
     user-select: none;
 }
 
@@ -886,7 +989,7 @@ body{
     height: 80%;
     border-radius: 15px;
     border: 4px solid black;
-    filter: drop-shadow(0px 0px 10px rgb(61, 255, 2));
+    filter: drop-shadow(0px 0px 10px rgb(240, 240, 240));
     background-color: rgb(0, 0, 0);
     z-index: 20;
     display: none;
@@ -899,10 +1002,10 @@ body{
     top: 2%;
     font-weight: bold;
     font-size: 6rem;
-    color: greenyellow;
+    color: rgb(240, 240, 240);
     cursor: pointer;
     user-select: none;
-    filter: drop-shadow(0 0 3px green);
+    filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.233));
     transition: all .6s ease-in-out;
 }
 
@@ -912,20 +1015,27 @@ body{
     font-size: 5.6rem;
 }
 
-.stars-cofreGris img{
-    width: 100%;
+
+.class-cofreGris img{
+    width: 88%;
     height: 100%;
     object-fit: cover;
 }
 
 .character1-gris img{
     width: 100%;
+    filter: contrast(115%) brightness(105%) ;
+
 }
 .character2-gris img{
     width: 100%;
+    filter: contrast(115%) brightness(105%) ;
+
 }
 .character3-gris img{
     width: 100%;
+    filter: contrast(115%) brightness(105%) ;
+
 }
 
 
@@ -944,7 +1054,7 @@ body{
 }
 
 .character1-gris:hover{
-    filter: drop-shadow(0px 0px 10px rgb(51, 255, 0));
+    filter: drop-shadow(0px 0px 10px rgb(240, 240, 240));
     transition: all 0.25s ease-in-out;
 }
 
@@ -955,11 +1065,12 @@ body{
     left: 50%;
     transform: translate(-50%);
     cursor: pointer;
-    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+    filter: drop-shadow(0px 0px 20px #ffffff3b);
+
 }
 
-.character2-gris:hover{
-    filter: drop-shadow(0px 0px 10px rgb(51, 255, 0));
+.character2-verde:hover{
+    filter: drop-shadow(0px 0px 10px rgb(240, 240, 240));
     transition: all 0.25s ease-in-out;
 }
 
@@ -970,76 +1081,152 @@ body{
     right: 10%;
     cursor: pointer;
     filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+
 }
 
 .character3-gris:hover{
-    filter: drop-shadow(0px 0px 10px rgb(43, 255, 0));
+    filter: drop-shadow(0px 0px 10px rgb(240, 240, 240));
     transition: all 0.25s ease-in-out;
 }
 
 
 .characterStats-cofreGris {
     position: relative;
-    width: 80%;
+    width: 70%;
 }
 
 .characterStats-cofreGris img{
     width: 100%;
-    height: 100%;
+    height: 95%;
+
 }
 
 
-.character1-grande-gris{
+/* character 1 stars */
+
+.character1-grande-gris-3stars{
     position: absolute;
     top: 5%;
     left: 50%;
     transform: translate(-50%);
     width: 90%;
     z-index: 3;
-    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
 }
 
-.character2-grande-gris{
+.character1-grande-gris-2stars{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 90%;
+    opacity: 0;
+}
+
+.character1-grande-gris-1stars{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 90%;
+    opacity: 0;
+
+}
+
+
+/* character 2 stars */
+
+.character2-grande-gris-3stars{
+    position: absolute;
+    top: 5.2%;
+    left: 50.5%;
+    transform: translate(-50%);
+    width: 90%;
+    z-index: 2;
+    opacity: 0;
+
+}
+
+.character2-grande-gris-2stars{
     position: absolute;
     top: 5%;
     left: 50%;
     transform: translate(-50%);
     width: 90%;
     z-index: 2;
-    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+    opacity: 0;
+
 }
 
-.character3-grande-gris{
+.character2-grande-gris-1stars{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 90%;
+    z-index: 2;
+    opacity: 0;
+
+}
+
+/* character 3 stars */
+
+.character3-grande-gris-3stars{
     position: absolute;
     top: 5%;
     left: 50%;
     transform: translate(-50%);
     width: 90%;
     z-index: 1;
-    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+    opacity: 0;
+
 }
+
+.character3-grande-gris-2stars{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 90%;
+    z-index: 1;
+    opacity: 0;
+
+}
+
+.character3-grande-gris-1stars{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 90%;
+    z-index: 1;
+    opacity: 0;
+
+}
+
+
 
 .character1-grande-gris img{
     width: 100%;
+    filter: contrast(115%) brightness(105%) ;
 }
 .character2-grande-gris img{
     width: 100%;
+    filter: contrast(115%) brightness(105%) ;
 }
 .character3-grande-gris img{
     width: 100%;
+    filter: contrast(115%) brightness(105%) ;
 }
-
-
 
 .stars-cofreGris{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    width: 60%;
+    width: 50%;
 }
 
-.stars-cofreGris img{
+.stars-cofreGrisimg{
     position: relative;
     width: 100%;
     height: 100%;
@@ -1048,9 +1235,9 @@ body{
 
 
 .star1-gris{
-    width: 9%;
+    width: 8%;
     position: absolute;
-    left: 25%;
+    left: 31%;
     cursor: pointer;
     filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
 }
@@ -1058,49 +1245,51 @@ body{
 .star1-gris img{
     width: 100%;
     height: 100%;
+    filter: contrast(115%) brightness(105%) ;
     object-fit: cover;
 }
 
 .star1-gris:hover{
-    filter: drop-shadow(0px 0px 10px rgb(43, 255, 0));
+    filter: drop-shadow(0px 0px 10px rgb(240, 240, 240));
     transition: all 0.25s ease-in-out;
 }
 
 .star1-gris:active{
-    width: 8.5%;
+    width: 7.5%;
 }
 
 
 .star2-gris{
-    width: 13%;
+    width: 11%;
     position: absolute;
-    left: 45.5%;
+    left: 47%;
     transform: translate(-50%);
     cursor: pointer;
-    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+    filter: drop-shadow(0px 0px 20px rgb(240, 240, 240));
 }
 
 .star2-gris img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: contrast(115%) brightness(105%) ;
 }
 
 .star2-gris:active{
-    width: 12.5%;
+    width: 10.5%;
 }
 
 
 .star2-gris:hover{
-    filter: drop-shadow(0px 0px 10px rgb(43, 255, 0));
+    filter: drop-shadow(0px 0px 10px rgb(240, 240, 240));
     transition: all 0.25s ease-in-out;
 }
 
 
 .star3-gris{
-    width: 19%;
+    width: 15%;
     position: absolute;
-    right: 15%;
+    right: 23%;
     transform: translate(-50%);
     cursor: pointer;
     filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
@@ -1109,20 +1298,85 @@ body{
 .star3-gris img{
     width: 100%;
     height: 100%;
+    filter: contrast(115%) brightness(105%) ;
     object-fit: cover;
 }
 
 .star3-gris:hover{
-    filter: drop-shadow(0px 0px 10px rgb(43, 255, 0));
+    filter: drop-shadow(0px 0px 10px rgb(240, 240, 240));
     transition: all 0.25s ease-in-out;
 }
 
 .star3-gris:active{
-    width: 18.5%;
+    width: 14.5%;
+}
+
+/* efect elementos */
+
+
+
+
+.character1-gris {
+    animation-iteration-count: infinite;
+    animation-duration:7000ms;
+    animation-name: slidein-gris;
+}
+.character2-gris {
+    animation-iteration-count: infinite;
+    animation-duration:7000ms;
+    animation-name: slidein-gris;
+}
+.character3-gris {
+    animation-iteration-count: infinite;
+    animation-duration:7000ms;
+    animation-name: slidein-gris;
 }
 
 
+.star1-gris{
+    animation-iteration-count: infinite;
+    animation-duration:7000ms;
+    animation-name: slidein-gris;
+}
 
+.star2-gris{
+    animation-iteration-count: infinite;
+    animation-duration:7000ms;
+    animation-name: slidein-gris;
+}
+
+
+.star3-gris{
+    animation-iteration-count: infinite;
+    animation-duration:7000ms;
+    animation-name: slidein-gris;
+}
+
+  
+@keyframes slidein-gris {
+  
+    20% {
+        filter: drop-shadow(1px 1px 10px rgb(240, 240, 240));
+
+    }
+
+    40% {
+        filter: none;
+    }
+  
+    60% {
+        filter: drop-shadow(1px 1px 10px rgb(240, 240, 240));
+    }
+    80% {
+        filter: none;
+    }
+
+    90% {
+        filter: drop-shadow(1px 1px 10px rgb(240, 240, 240));
+        
+    }
+
+}
 
 
 
@@ -1140,6 +1394,7 @@ body{
     opacity: 0;
     z-index: 5;
     display: none;
+    filter: contrast(110%) brightness(110%) ;
 }
 
 .contenedor__cofreVerde{
@@ -1168,36 +1423,38 @@ body{
 .flecha__back-verde img{
     width: 100%;
     height: 100%;
+    filter: contrast(109%) brightness(115%) ;
 
 }
 
 
 /* button buy cofre */
 .buttonBuy-cofreVerde button{
-    width: 15rem;
-    height: 7rem;
+    width: 17rem;
+    height: 8rem;
     cursor: pointer;
     font-size: 3.5rem;
     color: white;
     background-color: rgb(13, 13, 14);
-    border-color: rgba(153, 255, 0, 0.356);
+    border-color: rgba(21, 255, 0, 0.356);
     letter-spacing: 1px;
     font-weight: bold;
-    border-top-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    bottom: 8rem;
+    bottom: 7rem;
     left: 55%;
+    border-radius: 15px;
     transform: translate(-50%);
+    border: none;
     position: absolute;
-    filter: drop-shadow(0 0 30px rgb(254, 255, 254));
+    filter: contrast(118%) brightness(145%) drop-shadow(0 0 20px rgb(74, 226, 54));
+    background-image: url("./src/cofre verde/Buy It.png");
+    background-size: contain;
 
 }
 
 .buttonBuy-cofreVerde button:active{
-    width: 14.5rem;
-    height: 6.5rem;
-    font-size: 3rem;
-    border-color: rgb(153, 255, 0);
+    width: 16.5rem;
+    height: 7.8rem;
+    border-color: rgb(43, 170, 39);
 } 
 
 
@@ -1221,11 +1478,12 @@ body{
     align-items: center;
     flex-wrap: nowrap;
     flex-direction: column;
+    gap: 2.5rem;
 }
   
 .class-cofreVerde {
     position: relative;
-    width: 90%;
+    width: 80%;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -1234,24 +1492,16 @@ body{
     filter: drop-shadow(0px 0px 10px rgb(0, 2, 0));
 }
 
-.class-cofreVerde img{
-    width: 88%;
-    height: 100%;
-    object-fit: cover;
-}
-
-
-
 .saberMas-verde{
     width: 5rem;
     height: 5rem;
     cursor:pointer;
     border-radius: 100%;
     position: absolute;
-    top: .5%;
-    right: 5.5%;
-    background-color: rgb(180, 252, 174);
-    filter: drop-shadow(0 0 8px rgba(79, 250, 79, 0.993));
+    top: -6%;
+    right: 5%;
+    background-color: rgb(174, 252, 178);
+    filter: drop-shadow(0 0 8px rgb(30, 255, 0));
     user-select: none;
 }
 
@@ -1281,7 +1531,7 @@ body{
     height: 80%;
     border-radius: 15px;
     border: 4px solid black;
-    filter: drop-shadow(0px 0px 10px rgb(61, 255, 2));
+    filter: drop-shadow(0px 0px 10px rgb(30, 255, 0));
     background-color: rgb(0, 0, 0);
     z-index: 20;
     display: none;
@@ -1294,10 +1544,10 @@ body{
     top: 2%;
     font-weight: bold;
     font-size: 6rem;
-    color: greenyellow;
+    color: rgb(106, 255, 47);
     cursor: pointer;
     user-select: none;
-    filter: drop-shadow(0 0 3px green);
+    filter: drop-shadow(0 0 3px rgba(9, 255, 0, 0.233));
     transition: all .6s ease-in-out;
 }
 
@@ -1308,14 +1558,26 @@ body{
 }
 
 
+.class-cofreVerde img{
+    width: 88%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .character1-verde img{
     width: 100%;
+    filter: contrast(115%) brightness(105%) ;
+
 }
 .character2-verde img{
     width: 100%;
+    filter: contrast(115%) brightness(105%) ;
+
 }
 .character3-verde img{
     width: 100%;
+    filter: contrast(115%) brightness(105%) ;
+
 }
 
 
@@ -1324,7 +1586,7 @@ body{
     position: absolute;
     left: 10%;
     cursor: pointer;
-    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+    filter: drop-shadow(0px 0px 20px rgba(9, 255, 0, 0.233));
 }
 
 .character1-verde img{
@@ -1334,7 +1596,7 @@ body{
 }
 
 .character1-verde:hover{
-    filter: drop-shadow(0px 0px 10px rgb(51, 255, 0));
+    filter: drop-shadow(0px 0px 10px rgb(30, 255, 0));
     transition: all 0.25s ease-in-out;
 }
 
@@ -1345,11 +1607,12 @@ body{
     left: 50%;
     transform: translate(-50%);
     cursor: pointer;
-    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+    filter: drop-shadow(0px 0px 20px rgba(9, 255, 0, 0.233));
+
 }
 
 .character2-verde:hover{
-    filter: drop-shadow(0px 0px 10px rgb(51, 255, 0));
+    filter: drop-shadow(0px 0px 10px rgb(30, 255, 0));
     transition: all 0.25s ease-in-out;
 }
 
@@ -1359,74 +1622,150 @@ body{
     position: absolute;
     right: 10%;
     cursor: pointer;
-    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+    filter: drop-shadow(0px 0px 20px rgba(9, 255, 0, 0.233));
+
 }
 
 .character3-verde:hover{
-    filter: drop-shadow(0px 0px 10px rgb(43, 255, 0));
+    filter: drop-shadow(0px 0px 10px rgb(30, 255, 0));
     transition: all 0.25s ease-in-out;
 }
 
 
 .characterStats-cofreVerde {
     position: relative;
-    width: 80%;
+    width: 70%;
 }
 
 .characterStats-cofreVerde img{
     width: 100%;
-    height: 100%;
+    height: 95%;
+
 }
 
 
-.character1-grande-verde{
+/* character 1 stars */
+
+.character1-grande-verde-3stars{
     position: absolute;
     top: 5%;
     left: 50%;
     transform: translate(-50%);
     width: 90%;
     z-index: 3;
-    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
 }
 
-.character2-grande-verde{
+.character1-grande-verde-2stars{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 90%;
+    opacity: 0;
+}
+
+.character1-grande-verde-1stars{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 90%;
+    opacity: 0;
+
+}
+
+
+/* character 2 stars */
+
+.character2-grande-verde-3stars{
+    position: absolute;
+    top: 5.2%;
+    left: 50.5%;
+    transform: translate(-50%);
+    width: 90%;
+    z-index: 2;
+    opacity: 0;
+
+}
+
+.character2-grande-verde-2stars{
     position: absolute;
     top: 5%;
     left: 50%;
     transform: translate(-50%);
     width: 90%;
     z-index: 2;
-    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+    opacity: 0;
+
 }
 
-.character3-grande-verde{
+.character2-grande-verde-1stars{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 90%;
+    z-index: 2;
+    opacity: 0;
+
+}
+
+/* character 3 stars */
+
+.character3-grande-verde-3stars{
     position: absolute;
     top: 5%;
     left: 50%;
     transform: translate(-50%);
     width: 90%;
     z-index: 1;
-    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+    opacity: 0;
+
 }
+
+.character3-grande-verde-2stars{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 90%;
+    z-index: 1;
+    opacity: 0;
+
+}
+
+.character3-grande-verde-1stars{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 90%;
+    z-index: 1;
+    opacity: 0;
+
+}
+
+
 
 .character1-grande-verde img{
     width: 100%;
+    filter: contrast(115%) brightness(105%) ;
 }
 .character2-grande-verde img{
     width: 100%;
+    filter: contrast(115%) brightness(105%) ;
 }
 .character3-grande-verde img{
     width: 100%;
+    filter: contrast(115%) brightness(105%) ;
 }
-
-
 
 .stars-cofreVerde{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    width: 60%;
+    width: 50%;
 }
 
 .stars-cofreVerde img{
@@ -1438,9 +1777,9 @@ body{
 
 
 .star1-verde{
-    width: 9%;
+    width: 8%;
     position: absolute;
-    left: 25%;
+    left: 31%;
     cursor: pointer;
     filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
 }
@@ -1448,23 +1787,24 @@ body{
 .star1-verde img{
     width: 100%;
     height: 100%;
+    filter: contrast(115%) brightness(105%) ;
     object-fit: cover;
 }
 
 .star1-verde:hover{
-    filter: drop-shadow(0px 0px 10px rgb(43, 255, 0));
+    filter: drop-shadow(0px 0px 10px rgb(30, 255, 0));
     transition: all 0.25s ease-in-out;
 }
 
 .star1-verde:active{
-    width: 8.5%;
+    width: 7.5%;
 }
 
 
 .star2-verde{
-    width: 13%;
+    width: 11%;
     position: absolute;
-    left: 45.5%;
+    left: 47%;
     transform: translate(-50%);
     cursor: pointer;
     filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
@@ -1474,23 +1814,24 @@ body{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: contrast(115%) brightness(105%) ;
 }
 
 .star2-verde:active{
-    width: 12.5%;
+    width: 10.5%;
 }
 
 
 .star2-verde:hover{
-    filter: drop-shadow(0px 0px 10px rgb(43, 255, 0));
+    filter: drop-shadow(0px 0px 10px rgb(30, 255, 0));
     transition: all 0.25s ease-in-out;
 }
 
 
 .star3-verde{
-    width: 19%;
+    width: 15%;
     position: absolute;
-    right: 15%;
+    right: 23%;
     transform: translate(-50%);
     cursor: pointer;
     filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
@@ -1499,16 +1840,84 @@ body{
 .star3-verde img{
     width: 100%;
     height: 100%;
+    filter: contrast(115%) brightness(105%) ;
     object-fit: cover;
 }
 
 .star3-verde:hover{
-    filter: drop-shadow(0px 0px 10px rgb(43, 255, 0));
+    filter: drop-shadow(0px 0px 10px rgb(30, 255, 0));
     transition: all 0.25s ease-in-out;
 }
 
 .star3-verde:active{
-    width: 18.5%;
+    width: 14.5%;
+}
+
+/* efect elementos */
+
+
+
+
+.character1-verde {
+    animation-iteration-count: infinite;
+    animation-duration:7000ms;
+    animation-name: slidein-verde;
+}
+.character2-verde {
+    animation-iteration-count: infinite;
+    animation-duration:7000ms;
+    animation-name: slidein-verde;
+}
+.character3-verde {
+    animation-iteration-count: infinite;
+    animation-duration:7000ms;
+    animation-name: slidein-verde;
+}
+
+
+.star1-verde{
+    animation-iteration-count: infinite;
+    animation-duration:7000ms;
+    animation-name: slidein-verde;
+}
+
+.star2-verde{
+    animation-iteration-count: infinite;
+    animation-duration:7000ms;
+    animation-name: slidein-verde;
+}
+
+
+.star3-verde{
+    animation-iteration-count: infinite;
+    animation-duration:7000ms;
+    animation-name: slidein-verde;
+}
+
+  
+@keyframes slidein-verde {
+  
+    20% {
+        filter: drop-shadow(1px 1px 10px rgb(30, 255, 0));
+
+    }
+
+    40% {
+        filter: none;
+    }
+  
+    60% {
+        filter: drop-shadow(1px 1px 10px rgb(30, 255, 0));
+    }
+    80% {
+        filter: none;
+    }
+
+    90% {
+        filter: drop-shadow(1px 1px 10px rgb(30, 255, 0));
+        
+    }
+
 }
 
 
@@ -1528,6 +1937,7 @@ body{
     opacity: 0;
     z-index: 5;
     display: none;
+    filter: contrast(108%) brightness(115%) ;
 }
 
 .contenedor__cofreDiamante{
@@ -1556,36 +1966,38 @@ body{
 .flecha__back-diamante img{
     width: 100%;
     height: 100%;
+    filter: contrast(109%) brightness(115%) ;
 
 }
 
 
 /* button buy cofre */
 .buttonBuy-cofreDiamante button{
-    width: 14rem;
-    height: 6rem;
+    width: 17rem;
+    height: 8rem;
     cursor: pointer;
     font-size: 3.5rem;
     color: white;
     background-color: rgb(13, 13, 14);
-    border-color: rgb(0, 225, 255);
+    border-color: rgba(0, 204, 255, 0.356);
     letter-spacing: 1px;
     font-weight: bold;
-    border-top-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    bottom: 8rem;
+    bottom: 7rem;
     left: 55%;
+    border-radius: 15px;
     transform: translate(-50%);
+    border: none;
     position: absolute;
-    filter: drop-shadow(0 0 30px rgb(254, 255, 254));
+    filter: contrast(106%) brightness(125%) drop-shadow(0 0 20px rgb(53, 216, 189));
+    background-image: url("./src/cofre diamante/Buy It.png");
+    background-size: contain;
 
 }
 
 .buttonBuy-cofreDiamante button:active{
-    width: 14.5rem;
-    height: 6.5rem;
-    font-size: 3rem;
-    border-color: rgb(0, 225, 255);
+    width: 16.5rem;
+    height: 7.8rem;
+    border-color: rgb(39, 170, 153);
 } 
 
 
@@ -1609,11 +2021,12 @@ body{
     align-items: center;
     flex-wrap: nowrap;
     flex-direction: column;
+    gap: 2.5rem;
 }
   
 .class-cofreDiamante {
     position: relative;
-    width: 90%;
+    width: 80%;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -1622,24 +2035,16 @@ body{
     filter: drop-shadow(0px 0px 10px rgb(0, 2, 0));
 }
 
-.class-cofreDiamante img{
-    width: 88%;
-    height: 100%;
-    object-fit: cover;
-}
-
-
-
 .saberMas-diamante{
     width: 5rem;
     height: 5rem;
     cursor:pointer;
     border-radius: 100%;
     position: absolute;
-    top: .5%;
-    right: 5.5%;
-    background-color:rgba(0, 225, 255, 0.664);
-    filter: drop-shadow(0 0 10px rgb(0, 225, 255));
+    top: -6%;
+    right: 5%;
+    background-color: rgb(174, 252, 239);
+    filter: drop-shadow(0 0 8px rgba(0, 255, 242, 0.993));
     user-select: none;
 }
 
@@ -1669,7 +2074,7 @@ body{
     height: 80%;
     border-radius: 15px;
     border: 4px solid black;
-    filter: drop-shadow(0px 0px 10px rgb(0, 225, 255));
+    filter: drop-shadow(0px 0px 10px rgba(0, 255, 242, 0.993));
     background-color: rgb(0, 0, 0);
     z-index: 20;
     display: none;
@@ -1682,10 +2087,10 @@ body{
     top: 2%;
     font-weight: bold;
     font-size: 6rem;
-    color: rgb(0, 225, 255);
+    color: rgba(0, 255, 242, 0.993);
     cursor: pointer;
     user-select: none;
-    filter: drop-shadow(0 0 3px rgb(0, 225, 255));
+    filter: drop-shadow(0 0 3px rgb(0, 128, 107));
     transition: all .6s ease-in-out;
 }
 
@@ -1696,14 +2101,26 @@ body{
 }
 
 
+.class-cofreDiamante img{
+    width: 88%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .character1-diamante img{
     width: 100%;
+    filter: contrast(115%) brightness(105%) ;
+
 }
 .character2-diamante img{
     width: 100%;
+    filter: contrast(115%) brightness(105%) ;
+
 }
 .character3-diamante img{
     width: 100%;
+    filter: contrast(115%) brightness(105%) ;
+
 }
 
 
@@ -1712,7 +2129,7 @@ body{
     position: absolute;
     left: 10%;
     cursor: pointer;
-    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+    filter: drop-shadow(0px 0px 20px rgba(0, 255, 242, 0.233));
 }
 
 .character1-diamante img{
@@ -1722,7 +2139,7 @@ body{
 }
 
 .character1-diamante:hover{
-    filter: drop-shadow(0px 0px 10px rgb(0, 225, 255));
+    filter: drop-shadow(0px 0px 10px rgba(0, 255, 242, 0.993));
     transition: all 0.25s ease-in-out;
 }
 
@@ -1733,11 +2150,12 @@ body{
     left: 50%;
     transform: translate(-50%);
     cursor: pointer;
-    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+    filter: drop-shadow(0px 0px 20px rgba(0, 255, 255, 0.233));
+
 }
 
 .character2-diamante:hover{
-    filter: drop-shadow(0px 0px 10px rgb(0, 225, 255));
+    filter: drop-shadow(0px 0px 10px rgba(0, 255, 242, 0.993));
     transition: all 0.25s ease-in-out;
 }
 
@@ -1747,73 +2165,150 @@ body{
     position: absolute;
     right: 10%;
     cursor: pointer;
-    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+    filter: drop-shadow(0px 0px 20px rgba(0, 225, 255, 0.233));
+
 }
 
 .character3-diamante:hover{
-    filter: drop-shadow(0px 0px 10px rgb(0, 225, 255));
+    filter: drop-shadow(0px 0px 10px rgba(0, 255, 242, 0.993));
     transition: all 0.25s ease-in-out;
 }
 
 
-.characterStats-cofreDiamante {
+.characterStats-cofreDiamante{
     position: relative;
-    width: 80%;
+    width: 70%;
 }
 
 .characterStats-cofreDiamante img{
     width: 100%;
-    height: 100%;
+    height: 95%;
+
 }
 
 
-.character1-grande-diamante{
+/* character 1 stars */
+
+.character1-grande-diamante-3stars{
     position: absolute;
     top: 5%;
     left: 50%;
     transform: translate(-50%);
     width: 90%;
     z-index: 3;
-    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
 }
 
-.character2-grande-diamante{
+.character1-grande-diamante-2stars{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 90%;
+    opacity: 0;
+}
+
+.character1-grande-diamante-1stars{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 90%;
+    opacity: 0;
+
+}
+
+
+/* character 2 stars */
+
+.character2-grande-diamante-3stars{
+    position: absolute;
+    top: 5.2%;
+    left: 50.5%;
+    transform: translate(-50%);
+    width: 90%;
+    z-index: 2;
+    opacity: 0;
+
+}
+
+.character2-grande-diamante-2stars{
     position: absolute;
     top: 5%;
     left: 50%;
     transform: translate(-50%);
     width: 90%;
     z-index: 2;
-    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+    opacity: 0;
+
 }
 
-.character3-grande-diamante{
+.character2-grande-diamante-1stars{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 90%;
+    z-index: 2;
+    opacity: 0;
+
+}
+
+/* character 3 stars */
+
+.character3-grande-diamante-3stars{
     position: absolute;
     top: 5%;
     left: 50%;
     transform: translate(-50%);
     width: 90%;
     z-index: 1;
-    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
+    opacity: 0;
+
 }
+
+.character3-grande-diamante-2stars{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 90%;
+    z-index: 1;
+    opacity: 0;
+
+}
+
+.character3-grande-diamante-1stars{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 90%;
+    z-index: 1;
+    opacity: 0;
+
+}
+
+
 
 .character1-grande-diamante img{
     width: 100%;
+    filter: contrast(115%) brightness(105%) ;
 }
 .character2-grande-diamante img{
     width: 100%;
+    filter: contrast(115%) brightness(105%) ;
 }
 .character3-grande-diamante img{
     width: 100%;
+    filter: contrast(115%) brightness(105%) ;
 }
-
 
 .stars-cofreDiamante{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    width: 60%;
+    width: 50%;
 }
 
 .stars-cofreDiamante img{
@@ -1825,9 +2320,9 @@ body{
 
 
 .star1-diamante{
-    width: 9%;
+    width: 8%;
     position: absolute;
-    left: 25%;
+    left: 31%;
     cursor: pointer;
     filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
 }
@@ -1835,23 +2330,24 @@ body{
 .star1-diamante img{
     width: 100%;
     height: 100%;
+    filter: contrast(115%) brightness(105%) ;
     object-fit: cover;
 }
 
 .star1-diamante:hover{
-    filter: drop-shadow(0px 0px 10px rgb(0, 225, 255));
+    filter: drop-shadow(0px 0px 10px rgba(0, 255, 242, 0.993));
     transition: all 0.25s ease-in-out;
 }
 
 .star1-diamante:active{
-    width: 8.5%;
+    width: 7.5%;
 }
 
 
 .star2-diamante{
-    width: 13%;
+    width: 11%;
     position: absolute;
-    left: 45.5%;
+    left: 47%;
     transform: translate(-50%);
     cursor: pointer;
     filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
@@ -1861,23 +2357,24 @@ body{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: contrast(115%) brightness(105%) ;
 }
 
 .star2-diamante:active{
-    width: 12.5%;
+    width: 10.5%;
 }
 
 
 .star2-diamante:hover{
-    filter: drop-shadow(0px 0px 10px rgb(0, 225, 255));
+    filter: drop-shadow(0px 0px 10px rgba(0, 255, 242, 0.993));
     transition: all 0.25s ease-in-out;
 }
 
 
 .star3-diamante{
-    width: 19%;
+    width: 15%;
     position: absolute;
-    right: 15%;
+    right: 23%;
     transform: translate(-50%);
     cursor: pointer;
     filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.233));
@@ -1886,17 +2383,86 @@ body{
 .star3-diamante img{
     width: 100%;
     height: 100%;
+    filter: contrast(115%) brightness(105%) ;
     object-fit: cover;
 }
 
 .star3-diamante:hover{
-    filter: drop-shadow(0px 0px 10px rgb(0, 225, 255));
+    filter: drop-shadow(0px 0px 10px rgba(0, 255, 242, 0.993));
     transition: all 0.25s ease-in-out;
 }
 
 .star3-diamante:active{
-    width: 18.5%;
+    width: 14.5%;
 }
+
+/* efect elementos */
+
+
+
+
+.character1-diamante {
+    animation-iteration-count: infinite;
+    animation-duration:7000ms;
+    animation-name: slidein-diamante;
+}
+.character2-diamante {
+    animation-iteration-count: infinite;
+    animation-duration:7000ms;
+    animation-name: slidein-diamante;
+}
+.character3-diamante {
+    animation-iteration-count: infinite;
+    animation-duration:7000ms;
+    animation-name: slidein-diamante;
+}
+
+
+.star1-diamante{
+    animation-iteration-count: infinite;
+    animation-duration:7000ms;
+    animation-name: slidein-diamante;
+}
+
+.star2-diamante{
+    animation-iteration-count: infinite;
+    animation-duration:7000ms;
+    animation-name: slidein-diamante;
+}
+
+
+.star3-diamante{
+    animation-iteration-count: infinite;
+    animation-duration:7000ms;
+    animation-name: slidein-diamante;
+}
+
+  
+@keyframes slidein-diamante {
+  
+    20% {
+        filter: drop-shadow(1px 1px 10px rgb(69, 226, 218));
+
+    }
+
+    40% {
+        filter: none;
+    }
+  
+    60% {
+        filter: drop-shadow(1px 1px 10px rgb(69, 226, 218));
+    }
+    80% {
+        filter: none;
+    }
+
+    90% {
+        filter: drop-shadow(1px 1px 10px rgb(69, 226, 218));
+        
+    }
+
+}
+
 
 
 

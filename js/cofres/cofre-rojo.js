@@ -124,14 +124,14 @@ character1.addEventListener("click", function(){
         opacity:0,
     })
 
-    let stars3 = document.querySelector(".star1-rojo");
+    let stars1 = document.querySelector(".star1-rojo");
     let stars2 = document.querySelector(".star2-rojo");
-    let stars1 = document.querySelector(".star3-rojo");
+    let stars3 = document.querySelector(".star3-rojo");
     
     stars1.addEventListener("click", function(){
         gsap.set(".character1-grande-rojo-3stars",{
             duration:2,
-            opacity:1,
+            opacity:0,
         })
     
         gsap.set(".character1-grande-rojo-2stars",{
@@ -141,17 +141,53 @@ character1.addEventListener("click", function(){
     
         gsap.set(".character1-grande-rojo-1stars",{
             duration:2,
+            opacity:1,
+        })
+
+    
+    
+        gsap.set(".character2-grande-rojo-2stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+    
+        gsap.set(".character2-grande-rojo-3stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+        gsap.set(".character2-grande-rojo-1stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+    
+    
+        gsap.set(".character3-grande-rojo-1stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+        
+        gsap.set(".character3-grande-rojo-2stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+        gsap.set(".character3-grande-rojo-3stars",{
+            duration:2,
             opacity:0,
         })
     
     });
     
     
+   
     stars2.addEventListener("click", function(){
         gsap.set(".character1-grande-rojo-3stars",{
             duration:2,
             opacity:0,
-    
         })
     
         gsap.set(".character1-grande-rojo-2stars",{
@@ -164,13 +200,50 @@ character1.addEventListener("click", function(){
             opacity:0,
         })
     
+    
+    
+    
+        gsap.set(".character2-grande-rojo-2stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+    
+        gsap.set(".character2-grande-rojo-3stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+        gsap.set(".character2-grande-rojo-1stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+    
+    
+        gsap.set(".character3-grande-rojo-1stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+        
+        gsap.set(".character3-grande-rojo-2stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+        gsap.set(".character3-grande-rojo-3stars",{
+            duration:2,
+            opacity:0,
+        })
+    
     });
-    
-    
+
+
     stars3.addEventListener("click", function(){
         gsap.set(".character1-grande-rojo-3stars",{
             duration:2,
-            opacity:0,
+            opacity:1,
         })
     
         gsap.set(".character1-grande-rojo-2stars",{
@@ -180,13 +253,50 @@ character1.addEventListener("click", function(){
     
         gsap.set(".character1-grande-rojo-1stars",{
             duration:2,
-            opacity:1,
+            opacity:0,
+        })
+    
+    
+    
+        gsap.set(".character2-grande-rojo-2stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+    
+        gsap.set(".character2-grande-rojo-3stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+        gsap.set(".character2-grande-rojo-1stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+    
+    
+        gsap.set(".character3-grande-rojo-1stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+        
+        gsap.set(".character3-grande-rojo-2stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+        gsap.set(".character3-grande-rojo-3stars",{
+            duration:2,
+            opacity:0,
         })
     
     });
-
 });
 
+
+/* character 2 */
 
 character2.addEventListener("click", function(){
     gsap.set(".character1-grande-rojo-3stars",{
@@ -242,9 +352,9 @@ character2.addEventListener("click", function(){
     })
 
 
-    let stars3 = document.querySelector(".star1-rojo");
+    let stars1 = document.querySelector(".star1-rojo");
     let stars2 = document.querySelector(".star2-rojo");
-    let stars1 = document.querySelector(".star3-rojo");
+    let stars3 = document.querySelector(".star3-rojo");
     
     stars1.addEventListener("click", function(){
         gsap.set(".character1-grande-rojo-3stars",{
@@ -261,8 +371,7 @@ character2.addEventListener("click", function(){
             duration:2,
             opacity:0,
         })
-    
-    
+
     
     
         gsap.set(".character2-grande-rojo-2stars",{
@@ -302,6 +411,7 @@ character2.addEventListener("click", function(){
     });
     
     
+   
     stars2.addEventListener("click", function(){
         gsap.set(".character1-grande-rojo-3stars",{
             duration:2,
@@ -356,8 +466,8 @@ character2.addEventListener("click", function(){
         })
     
     });
-    
-    
+
+
     stars3.addEventListener("click", function(){
         gsap.set(".character1-grande-rojo-3stars",{
             duration:2,
@@ -373,7 +483,6 @@ character2.addEventListener("click", function(){
             duration:2,
             opacity:0,
         })
-    
     
     
     
@@ -413,7 +522,13 @@ character2.addEventListener("click", function(){
     
     });
 
+    
+    
+
 });
+
+
+/* character 3 */
 
 
 character3.addEventListener("click", function(){
@@ -471,22 +586,59 @@ character3.addEventListener("click", function(){
     })
     
 
-    let stars3 = document.querySelector(".star1-rojo");
+    let stars1 = document.querySelector(".star1-rojo");
     let stars2 = document.querySelector(".star2-rojo");
-    let stars1 = document.querySelector(".star3-rojo");
+    let stars3 = document.querySelector(".star3-rojo");
     
     stars1.addEventListener("click", function(){
-        gsap.set(".character3-grande-rojo-3stars",{
+        gsap.set(".character1-grande-rojo-3stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+        gsap.set(".character1-grande-rojo-2stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+        gsap.set(".character1-grande-rojo-1stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+    
+    
+    
+        gsap.set(".character2-grande-rojo-2stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+    
+        gsap.set(".character2-grande-rojo-3stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+        gsap.set(".character2-grande-rojo-1stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+    
+    
+        gsap.set(".character3-grande-rojo-1stars",{
             duration:2,
             opacity:1,
         })
     
+        
         gsap.set(".character3-grande-rojo-2stars",{
             duration:2,
             opacity:0,
         })
     
-        gsap.set(".character3-grande-rojo-1stars",{
+        gsap.set(".character3-grande-rojo-3stars",{
             duration:2,
             opacity:0,
         })
@@ -495,18 +647,54 @@ character3.addEventListener("click", function(){
     
     
     stars2.addEventListener("click", function(){
-        gsap.set(".character3-grande-rojo-3stars",{
+        gsap.set(".character1-grande-rojo-3stars",{
             duration:2,
             opacity:0,
-    
         })
     
+        gsap.set(".character1-grande-rojo-2stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+        gsap.set(".character1-grande-rojo-1stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+    
+    
+    
+        gsap.set(".character2-grande-rojo-2stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+    
+        gsap.set(".character2-grande-rojo-3stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+        gsap.set(".character2-grande-rojo-1stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+    
+    
+        gsap.set(".character3-grande-rojo-1stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+        
         gsap.set(".character3-grande-rojo-2stars",{
             duration:2,
             opacity:1,
         })
     
-        gsap.set(".character3-grande-rojo-1stars",{
+        gsap.set(".character3-grande-rojo-3stars",{
             duration:2,
             opacity:0,
         })
@@ -515,22 +703,60 @@ character3.addEventListener("click", function(){
     
     
     stars3.addEventListener("click", function(){
-        gsap.set(".character3-grande-rojo-3stars",{
+        gsap.set(".character1-grande-rojo-3stars",{
             duration:2,
             opacity:0,
         })
     
+        gsap.set(".character1-grande-rojo-2stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+        gsap.set(".character1-grande-rojo-1stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+    
+    
+    
+        gsap.set(".character2-grande-rojo-2stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+    
+        gsap.set(".character2-grande-rojo-3stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+        gsap.set(".character2-grande-rojo-1stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+    
+    
+        gsap.set(".character3-grande-rojo-1stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+        
         gsap.set(".character3-grande-rojo-2stars",{
             duration:2,
             opacity:0,
         })
     
-        gsap.set(".character3-grande-rojo-1stars",{
+        gsap.set(".character3-grande-rojo-3stars",{
             duration:2,
             opacity:1,
         })
     
     });
+
 
 });
 

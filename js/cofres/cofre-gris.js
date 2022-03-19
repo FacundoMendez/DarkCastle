@@ -108,69 +108,703 @@ flecha__backGris.addEventListener("click", function(){
     
 })();
 
+
 (() =>{
-/* CHARACTER COFRE GRIS */
-
-let character1 = document.querySelector(".character1-gris");
-let character2 = document.querySelector(".character2-gris");
-let character3 = document.querySelector(".character3-gris");
-
-character1.addEventListener("click", function(){
-    gsap.set(".character1-grande-gris",{
-        duration:2,
-        opacity:1,
-    })
-
-    gsap.set(".character2-grande-gris",{
-        duration:2,
-        opacity:0,
-    })
-
-    gsap.set(".character3-grande-gris",{
-        duration:2,
-        opacity:0,
-    })
-
-});
-
-
-character2.addEventListener("click", function(){
-    gsap.set(".character1-grande-gris",{
-        duration:2,
-        opacity:0,
-
-    })
-
-    gsap.set(".character2-grande-gris",{
-        duration:2,
-        opacity:1,
-    })
-
-    gsap.set(".character3-grande-gris",{
-        duration:2,
-        opacity:0,
-    })
-
-});
-
-
-character3.addEventListener("click", function(){
-    gsap.set(".character1-grande-gris",{
-        duration:2,
-        opacity:0,
-    })
-
-    gsap.set(".character2-grande-gris",{
-        duration:2,
-        opacity:0,
-    })
-
-    gsap.set(".character3-grande-gris",{
-        duration:2,
-        opacity:1,
-    })
-
-
-});
-
+    /* CHARACTER COFRE gris */
+    
+    
+    let character1 = document.querySelector(".character1-gris");
+    let character2 = document.querySelector(".character2-gris");
+    let character3 = document.querySelector(".character3-gris");
+    
+    character1.addEventListener("click", function(){
+        gsap.set(".character1-grande-gris-3stars",{
+            duration:2,
+            opacity:1,
+        })
+    
+        gsap.set(".character1-grande-gris-2stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+        gsap.set(".character1-grande-gris-1stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+    
+    
+    
+        gsap.set(".character2-grande-gris-2stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+    
+        gsap.set(".character2-grande-gris-3stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+        gsap.set(".character2-grande-gris-1stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+    
+    
+        gsap.set(".character3-grande-gris-1stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+        
+        gsap.set(".character3-grande-gris-2stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+        gsap.set(".character3-grande-gris-3stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+        let stars1 = document.querySelector(".star1-gris");
+        let stars2 = document.querySelector(".star2-gris");
+        let stars3 = document.querySelector(".star3-gris");
+        
+        stars1.addEventListener("click", function(){
+            gsap.set(".character1-grande-gris-3stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+            gsap.set(".character1-grande-gris-2stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+            gsap.set(".character1-grande-gris-1stars",{
+                duration:2,
+                opacity:1,
+            })
+    
+        
+        
+            gsap.set(".character2-grande-gris-2stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+        
+            gsap.set(".character2-grande-gris-3stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+            gsap.set(".character2-grande-gris-1stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+        
+        
+            gsap.set(".character3-grande-gris-1stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+            
+            gsap.set(".character3-grande-gris-2stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+            gsap.set(".character3-grande-gris-3stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+        });
+        
+        
+       
+        stars2.addEventListener("click", function(){
+            gsap.set(".character1-grande-gris-3stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+            gsap.set(".character1-grande-gris-2stars",{
+                duration:2,
+                opacity:1,
+            })
+        
+            gsap.set(".character1-grande-gris-1stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+        
+        
+        
+            gsap.set(".character2-grande-gris-2stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+        
+            gsap.set(".character2-grande-gris-3stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+            gsap.set(".character2-grande-gris-1stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+        
+        
+            gsap.set(".character3-grande-gris-1stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+            
+            gsap.set(".character3-grande-gris-2stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+            gsap.set(".character3-grande-gris-3stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+        });
+    
+    
+        stars3.addEventListener("click", function(){
+            gsap.set(".character1-grande-gris-3stars",{
+                duration:2,
+                opacity:1,
+            })
+        
+            gsap.set(".character1-grande-gris-2stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+            gsap.set(".character1-grande-gris-1stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+        
+        
+            gsap.set(".character2-grande-gris-2stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+        
+            gsap.set(".character2-grande-gris-3stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+            gsap.set(".character2-grande-gris-1stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+        
+        
+            gsap.set(".character3-grande-gris-1stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+            
+            gsap.set(".character3-grande-gris-2stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+            gsap.set(".character3-grande-gris-3stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+        });
+    });
+    
+    
+    /* character 2 */
+    
+    character2.addEventListener("click", function(){
+        gsap.set(".character1-grande-gris-3stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+        gsap.set(".character1-grande-gris-2stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+        gsap.set(".character1-grande-gris-1stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+    
+    
+    
+        gsap.set(".character2-grande-gris-2stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+    
+        gsap.set(".character2-grande-gris-3stars",{
+            duration:2,
+            opacity:1,
+        })
+    
+        gsap.set(".character2-grande-gris-1stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+    
+    
+        gsap.set(".character3-grande-gris-1stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+        
+        gsap.set(".character3-grande-gris-2stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+        gsap.set(".character3-grande-gris-3stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+    
+        let stars1 = document.querySelector(".star1-gris");
+        let stars2 = document.querySelector(".star2-gris");
+        let stars3 = document.querySelector(".star3-gris");
+        
+        stars1.addEventListener("click", function(){
+            gsap.set(".character1-grande-gris-3stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+            gsap.set(".character1-grande-gris-2stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+            gsap.set(".character1-grande-gris-1stars",{
+                duration:2,
+                opacity:0,
+            })
+    
+        
+        
+            gsap.set(".character2-grande-gris-2stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+        
+            gsap.set(".character2-grande-gris-3stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+            gsap.set(".character2-grande-gris-1stars",{
+                duration:2,
+                opacity:1,
+            })
+        
+        
+        
+            gsap.set(".character3-grande-gris-1stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+            
+            gsap.set(".character3-grande-gris-2stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+            gsap.set(".character3-grande-gris-3stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+        });
+        
+        
+       
+        stars2.addEventListener("click", function(){
+            gsap.set(".character1-grande-gris-3stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+            gsap.set(".character1-grande-gris-2stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+            gsap.set(".character1-grande-gris-1stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+        
+        
+        
+            gsap.set(".character2-grande-gris-2stars",{
+                duration:2,
+                opacity:1,
+            })
+        
+        
+            gsap.set(".character2-grande-gris-3stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+            gsap.set(".character2-grande-gris-1stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+        
+        
+            gsap.set(".character3-grande-gris-1stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+            
+            gsap.set(".character3-grande-gris-2stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+            gsap.set(".character3-grande-gris-3stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+        });
+    
+    
+        stars3.addEventListener("click", function(){
+            gsap.set(".character1-grande-gris-3stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+            gsap.set(".character1-grande-gris-2stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+            gsap.set(".character1-grande-gris-1stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+        
+        
+            gsap.set(".character2-grande-gris-2stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+        
+            gsap.set(".character2-grande-gris-3stars",{
+                duration:2,
+                opacity:1,
+            })
+        
+            gsap.set(".character2-grande-gris-1stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+        
+        
+            gsap.set(".character3-grande-gris-1stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+            
+            gsap.set(".character3-grande-gris-2stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+            gsap.set(".character3-grande-gris-3stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+        });
+    
+        
+        
+    
+    });
+    
+    
+    /* character 3 */
+    
+    
+    character3.addEventListener("click", function(){
+    
+        gsap.set(".character1-grande-gris-3stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+        gsap.set(".character1-grande-gris-2stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+        gsap.set(".character1-grande-gris-1stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+    
+    
+    
+        gsap.set(".character2-grande-gris-2stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+    
+        gsap.set(".character2-grande-gris-3stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+        gsap.set(".character2-grande-gris-1stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+    
+    
+        gsap.set(".character3-grande-gris-1stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+        
+        gsap.set(".character3-grande-gris-2stars",{
+            duration:2,
+            opacity:0,
+        })
+    
+        gsap.set(".character3-grande-gris-3stars",{
+            duration:2,
+            opacity:1,
+        })
+        
+    
+        let stars1 = document.querySelector(".star1-gris");
+        let stars2 = document.querySelector(".star2-gris");
+        let stars3 = document.querySelector(".star3-gris");
+        
+        stars1.addEventListener("click", function(){
+            gsap.set(".character1-grande-gris-3stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+            gsap.set(".character1-grande-gris-2stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+            gsap.set(".character1-grande-gris-1stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+        
+        
+        
+            gsap.set(".character2-grande-gris-2stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+        
+            gsap.set(".character2-grande-gris-3stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+            gsap.set(".character2-grande-gris-1stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+        
+        
+            gsap.set(".character3-grande-gris-1stars",{
+                duration:2,
+                opacity:1,
+            })
+        
+            
+            gsap.set(".character3-grande-gris-2stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+            gsap.set(".character3-grande-gris-3stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+        });
+        
+        
+        stars2.addEventListener("click", function(){
+            gsap.set(".character1-grande-gris-3stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+            gsap.set(".character1-grande-gris-2stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+            gsap.set(".character1-grande-gris-1stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+        
+        
+        
+            gsap.set(".character2-grande-gris-2stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+        
+            gsap.set(".character2-grande-gris-3stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+            gsap.set(".character2-grande-gris-1stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+        
+        
+            gsap.set(".character3-grande-gris-1stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+            
+            gsap.set(".character3-grande-gris-2stars",{
+                duration:2,
+                opacity:1,
+            })
+        
+            gsap.set(".character3-grande-gris-3stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+        });
+        
+        
+        stars3.addEventListener("click", function(){
+            gsap.set(".character1-grande-gris-3stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+            gsap.set(".character1-grande-gris-2stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+            gsap.set(".character1-grande-gris-1stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+        
+        
+        
+            gsap.set(".character2-grande-gris-2stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+        
+            gsap.set(".character2-grande-gris-3stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+            gsap.set(".character2-grande-gris-1stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+        
+        
+            gsap.set(".character3-grande-gris-1stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+            
+            gsap.set(".character3-grande-gris-2stars",{
+                duration:2,
+                opacity:0,
+            })
+        
+            gsap.set(".character3-grande-gris-3stars",{
+                duration:2,
+                opacity:1,
+            })
+        
+        });
+    
+    
+    });
+    
 })();
+    
