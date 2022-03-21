@@ -191,28 +191,21 @@
             trigger:".container3",
             pin:".container3",
             scrub:1.8,
-            end:"+420%"
+            end:"+430%"
         }
     })
 
     .to(".container3__pasillo",{
-        duration:18,
-        scale:"-=6.8",
+        duration:20,
+        scale:"-=7.2",
     })
 
     .to(".container3__ojos",{
         opacity:1,
         duration:5,
     })
-    .to(".container3__ojos",{
-        opacity:0,
-        duration:7,
-    })
-    .to(".container3__ojos",{
-        duration:1,
-        opacity:3,
-        scale:1.1
-    })
+
+
 
     .to(".container3__pasillo",{
         webkitFilter:"blur(5px)"
