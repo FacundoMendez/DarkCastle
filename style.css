@@ -322,7 +322,6 @@ body{
     height: 400px;
     cursor: pointer;
     user-select: none;
-    display: none;
 }
 
 /* COFRES PANTALLA INDIVIDUAL */
@@ -2516,14 +2515,8 @@ body{
 @media screen and (max-width:1600px){
     
     .container3__buttons{
-        position: relative;
-        z-index: 3;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: nowrap;
-        gap: 120px;
-        margin-top: 480px;
+        gap: 4vw;
+        margin-top: 300px;
     }
 
     .buttonCofre{
