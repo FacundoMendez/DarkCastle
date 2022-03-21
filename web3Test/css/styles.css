@@ -1,5 +1,18 @@
-.body {
-    background: rgb();
+body {
+    background-image: url("../../src/pasilloCastle1.png");
+    background-color: black;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+* {
+    color: white;
+}
+
+h1 {
+    margin-top: 10vh;
 }
 
 .buttons {
@@ -7,7 +20,7 @@
     margin: auto auto;
     width: 60%;
     justify-content: space-between;
-    margin-top: 5vmin;
+    margin-top: 10vh;
 }
 
 .nftImg {
@@ -22,7 +35,7 @@
     align-items: center;
     justify-content: center;
     margin-top: 10vmin;
-    height: 60vh;
+    height: 40vh;
 }
 
 .nft-info {

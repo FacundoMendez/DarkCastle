@@ -36,7 +36,7 @@ addEventListener('load', async function() {
     }
 
     document.querySelector("#btn-mint-common").addEventListener('click', async () => {
-        await nftsDelegatorContract.methods.mintCommon().send({from: userAccount, value: web3js.utils.toWei("0.01")})
+        await nftsDelegatorContract.methods.mintCommon().send({from: userAccount, value: web3js.utils.toWei("0.001")})
         .on('receipt', async () =>{
             balanceOfOwner = await nftsContract.methods.balanceOf(userAccount).call({from: userAccount});
             let nftId = await nftsContract.methods.tokenOfOwnerByIndex(userAccount, balanceOfOwner - 1).call({from: userAccount});
@@ -56,6 +56,75 @@ addEventListener('load', async function() {
         .on('error', () => {
             alert("Error");
         });
-    })
+    });
+    
+    document.querySelector("#btn-mint-uncommon").addEventListener('click', async () => {
+        await nftsDelegatorContract.methods.mintRare().send({from: userAccount, value: web3js.utils.toWei("0.0025")})
+        .on('receipt', async () =>{
+            balanceOfOwner = await nftsContract.methods.balanceOf(userAccount).call({from: userAccount});
+            let nftId = await nftsContract.methods.tokenOfOwnerByIndex(userAccount, balanceOfOwner - 1).call({from: userAccount});
+            let uri = await nftsContract.methods.tokenURI(nftId).call({from: userAccount});
+            let dna = await nftsContract.methods.getTokenDna(nftId).call({from: userAccount});
+            console.log(dna);
+            await fetch(uri).then(async response => {
+                metadata = await response.json();
+            });
+
+            document.querySelector("#img").setAttribute("src", metadata["image"]);
+            document.querySelector("#nft-dna").innerHTML = dna;
+            document.querySelector("#nft-rareness").innerHTML = rareness[dna[0]];
+            document.querySelector("#nft-stars").innerHTML = parseInt(dna[2]) + 1;
+            document.querySelector("#nft-type").innerHTML = types[dna[1]];
+        })
+        .on('error', () => {
+            alert("Error");
+        });
+    });
+
+    document.querySelector("#btn-mint-rare").addEventListener('click', async () => {
+        await nftsDelegatorContract.methods.mintEpic().send({from: userAccount, value: web3js.utils.toWei("0.005")})
+        .on('receipt', async () =>{
+            balanceOfOwner = await nftsContract.methods.balanceOf(userAccount).call({from: userAccount});
+            let nftId = await nftsContract.methods.tokenOfOwnerByIndex(userAccount, balanceOfOwner - 1).call({from: userAccount});
+            let uri = await nftsContract.methods.tokenURI(nftId).call({from: userAccount});
+            let dna = await nftsContract.methods.getTokenDna(nftId).call({from: userAccount});
+            console.log(dna);
+            await fetch(uri).then(async response => {
+                metadata = await response.json();
+            });
+
+            document.querySelector("#img").setAttribute("src", metadata["image"]);
+            document.querySelector("#nft-dna").innerHTML = dna;
+            document.querySelector("#nft-rareness").innerHTML = rareness[dna[0]];
+            document.querySelector("#nft-stars").innerHTML = parseInt(dna[2]) + 1;
+            document.querySelector("#nft-type").innerHTML = types[dna[1]];
+        })
+        .on('error', () => {
+            alert("Error");
+        });
+    });
+
+    document.querySelector("#btn-mint-legendary").addEventListener('click', async () => {
+        await nftsDelegatorContract.methods.mintMithic().send({from: userAccount, value: web3js.utils.toWei("0.01")})
+        .on('receipt', async () =>{
+            balanceOfOwner = await nftsContract.methods.balanceOf(userAccount).call({from: userAccount});
+            let nftId = await nftsContract.methods.tokenOfOwnerByIndex(userAccount, balanceOfOwner - 1).call({from: userAccount});
+            let uri = await nftsContract.methods.tokenURI(nftId).call({from: userAccount});
+            let dna = await nftsContract.methods.getTokenDna(nftId).call({from: userAccount});
+            console.log(dna);
+            await fetch(uri).then(async response => {
+                metadata = await response.json();
+            });
+
+            document.querySelector("#img").setAttribute("src", metadata["image"]);
+            document.querySelector("#nft-dna").innerHTML = dna;
+            document.querySelector("#nft-rareness").innerHTML = rareness[dna[0]];
+            document.querySelector("#nft-stars").innerHTML = parseInt(dna[2]) + 1;
+            document.querySelector("#nft-type").innerHTML = types[dna[1]];
+        })
+        .on('error', () => {
+            alert("Error");
+        });
+    });
     
 });
