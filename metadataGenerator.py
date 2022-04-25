@@ -3,7 +3,7 @@ import json
 
 
 # Settings
-base_uri = "https://ipfs.io/ipfs/QmcumnkCpFn3gSobLooEzdAK8dNfdBAHXThzbLBH9oFrqC/"
+base_uri = "https://ipfs.io/ipfs/QmR9TS4a6PWaPtBcyMbtfa2J8yMEhMZjgATopbP5xcJpH7/"
 media_extension = ".png"
 rareness = ["Obsidian", "Emerald", "Ruby", "Diamond"]
 heroes = ["Reaper", "Warrior", "Sourcerer"]
