@@ -5,15 +5,21 @@ import "./Nfts.sol";
 import "./Lands.sol";
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "@openzeppelin/contracts/utils/math/SafeMath.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
 import "./FusionStones.sol";
 import "./SecurityStones.sol";
 
 contract nftsMinterDelegator {
     using SafeMath for uint;
 
-    constructor() {
+
+    // Constructor
+    constructor(address ownersAddress, address liquidityAddress) {
         _owner = msg.sender;
+        _ownersAddress = ownersAddress;
+        _liquidityAddress = liquidityAddress;
     }
+
 
     // Nft Rarities
     enum Rarities{ COMMON, RARE, EPIC, MITHIC }
@@ -55,7 +61,7 @@ contract nftsMinterDelegator {
 
     // Prices
     uint[] public publicSaleERCPrices = [100, 500, 2500, 10000]; // In tokens. Without Decimals.
-    uint[] public firstPrivateSalePrices = [0.1 ether, 0.25 ether, 0.5 ether, 1 ether]; // In wei.
+    uint[] public firstPrivateSalePrices = [0.0001 ether, 0.0001 ether, 0.0001 ether, 0.0001 ether];// [0.1 ether, 0.25 ether, 0.5 ether, 1 ether]; // In wei.
     uint[] public secondPrivateSalePrices = [0.3 ether, 0.75 ether, 1.5 ether, 3 ether]; // In wei.
 
     uint public publicLandsSaleERCPrices = 5000; // In tokens. Without Decimals.
@@ -91,14 +97,14 @@ contract nftsMinterDelegator {
         bool _continue = _checkBalance(0);
         require(_continue, "Error");
 
-        uint[] memory _newNftDna = new uint[](3);
+        uint[] memory _newNftDna = new uint[](4);
 
         _newNftDna[0] = 1; // Rareness
         _newNftDna[1] = _getNftType(); // Type
         _newNftDna[2] = _getNftStars(); // Stars
         _newNftDna[3] = raritiesValues[1]; // Rareness Value
 
-        uint _newNftId = nfts.mint(_newNftDna);
+        uint _newNftId = nfts.mint(_newNftDna, msg.sender);
         return _newNftId;
     }
 
@@ -106,14 +112,14 @@ contract nftsMinterDelegator {
         bool _continue = _checkBalance(1);
         require(_continue, "Error");
 
-        uint[] memory _newNftDna = new uint[](3);
+        uint[] memory _newNftDna = new uint[](4);
 
         _newNftDna[0] = 2; // Rareness
         _newNftDna[1] = _getNftType(); // Type
         _newNftDna[2] = _getNftStars(); // Stars
         _newNftDna[3] = raritiesValues[2]; // Rareness Value
 
-        uint _newNftId = nfts.mint(_newNftDna);
+        uint _newNftId = nfts.mint(_newNftDna, msg.sender);
         return _newNftId;
     }
 
@@ -121,14 +127,14 @@ contract nftsMinterDelegator {
         bool _continue = _checkBalance(2);
         require(_continue, "Error");
 
-        uint[] memory _newNftDna = new uint[](3);
+        uint[] memory _newNftDna = new uint[](4);
 
         _newNftDna[0] = 3; // Rareness
         _newNftDna[1] = _getNftType(); // Type
         _newNftDna[2] = _getNftStars(); // Stars
         _newNftDna[3] = raritiesValues[3]; // Rareness Value
 
-        uint _newNftId = nfts.mint(_newNftDna);
+        uint _newNftId = nfts.mint(_newNftDna, msg.sender);
         return _newNftId;
     }
 
@@ -136,14 +142,14 @@ contract nftsMinterDelegator {
         bool _continue = _checkBalance(3);
         require(_continue, "Error");
 
-        uint[] memory _newNftDna = new uint[](3);
+        uint[] memory _newNftDna = new uint[](4);
 
         _newNftDna[0] = 4; // Rareness
         _newNftDna[1] = _getNftType(); // Type
         _newNftDna[2] = _getNftStars(); // Stars
         _newNftDna[3] = raritiesValues[4]; // Rareness Value
 
-        uint _newNftId = nfts.mint(_newNftDna);
+        uint _newNftId = nfts.mint(_newNftDna, msg.sender);
         return _newNftId;
     }
 
@@ -157,7 +163,7 @@ contract nftsMinterDelegator {
 
         _newNftDna[0] = _rareness; // Rareness
 
-        uint _newNftId = lands.mint(_newNftDna);
+        uint _newNftId = lands.mint(_newNftDna, msg.sender);
         return _newNftId;
     }
 
@@ -199,7 +205,7 @@ contract nftsMinterDelegator {
             nfts.delegatedBurn(_nftIdTwo);
             nfts.delegatedBurn(_nftIdThree);
 
-            uint _newNftId = nfts.mint(_newNftDna);
+            uint _newNftId = nfts.mint(_newNftDna, msg.sender);
             return (_newNftId, true);
 
         } else {
@@ -373,11 +379,11 @@ contract nftsMinterDelegator {
     } 
 
     function _getNftType() internal view returns(uint) {
-        return uint(keccak256(abi.encodePacked(block.timestamp,block.difficulty, msg.sender, maxNftsAmount, firstPrivateSaleNftsAmountLeft, secondPrivateSaleNftsAmountLeft))) % 3;
+        return uint(keccak256(abi.encodePacked(block.timestamp,block.difficulty, msg.sender, maxNftsAmount, firstPrivateSaleNftsAmountLeft, secondPrivateSaleNftsAmountLeft))) % 3 + 1;
     }
 
     function _getNftStars() internal view returns(uint) {
-        return uint(keccak256(abi.encodePacked(block.timestamp,block.difficulty, msg.sender))) % 3;
+        return uint(keccak256(abi.encodePacked(block.timestamp,block.difficulty, msg.sender))) % 3 + 1;
     }
 
     function _getNftRarity(uint _nftIdOne, uint _nftIdTwo, uint _nftIdThree) internal view returns(uint) {
@@ -401,11 +407,16 @@ contract nftsMinterDelegator {
         }
     }
 
-    receive() external payable {}
+    receive() external payable {} // For donations.
 
-    function withdraw() public onlyOwner {
-        payable(msg.sender).transfer(payable(address(this)).balance);
+    function donate() external payable {}  // thank you.
+
+    // This allows the devs to receive kind donations.
+    function withdraw() external onlyOwner {
+        (bool sent, ) = payable(_owner).call{value: payable(address(this)).balance}("");
+        require(sent, "Failed to withdraw");
     }
+
 
 
     // Modifiers

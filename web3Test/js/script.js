@@ -1,8 +1,8 @@
 import nftsAbi from "../abis/NftsAbi.js";
 import nftsDelegatorAbi from "../abis/NftsDelegatorAbi.js";
 
-const nftsContractAddress = "0xdc4c4fB4532c06A79A52a7b8818d15bc22103Ea2";
-const nftsDelegatorContractAddress = "0x86283d4E57074423477fE79613736265E0311428";
+const nftsContractAddress = "0x6529DA150874EaCD74085cf1a947C58c0a6fAB31";
+const nftsDelegatorContractAddress = "0x6Eb8612Be4A0132177917E58156D1b7afFE04Eea";
 
 let nftsContract;
 let nftsDelegatorContract;
@@ -12,8 +12,8 @@ let metadata;
 
 let userAccount;
 
-const rareness = ["N/A", "Common", "UnCommon", "Epic", "Legendary"];
-const types = ["Reaper", "Sourcerer", "Warrior"];
+const rareness = ["N/A", "Obsidian", "Emerald", "Ruby", "Diamond"];
+const types = ["N/A", "Reaper", "Sourcerer", "Warrior"];
 
 
 addEventListener('load', async function() {
@@ -36,7 +36,7 @@ addEventListener('load', async function() {
     }
 
     document.querySelector("#btn-mint-common").addEventListener('click', async () => {
-        await nftsDelegatorContract.methods.mintCommon().send({from: userAccount, value: web3js.utils.toWei("0.001")})
+        await nftsDelegatorContract.methods.mintCommon().send({from: userAccount, value: web3js.utils.toWei("0.0001")})
         .on('receipt', async () =>{
             balanceOfOwner = await nftsContract.methods.balanceOf(userAccount).call({from: userAccount});
             let nftId = await nftsContract.methods.tokenOfOwnerByIndex(userAccount, balanceOfOwner - 1).call({from: userAccount});
@@ -50,7 +50,7 @@ addEventListener('load', async function() {
             document.querySelector("#img").setAttribute("src", metadata["image"]);
             document.querySelector("#nft-dna").innerHTML = dna;
             document.querySelector("#nft-rareness").innerHTML = rareness[dna[0]];
-            document.querySelector("#nft-stars").innerHTML = parseInt(dna[2]) + 1;
+            document.querySelector("#nft-stars").innerHTML = parseInt(dna[2]);
             document.querySelector("#nft-type").innerHTML = types[dna[1]];
         })
         .on('error', () => {
@@ -59,7 +59,7 @@ addEventListener('load', async function() {
     });
     
     document.querySelector("#btn-mint-uncommon").addEventListener('click', async () => {
-        await nftsDelegatorContract.methods.mintRare().send({from: userAccount, value: web3js.utils.toWei("0.0025")})
+        await nftsDelegatorContract.methods.mintRare().send({from: userAccount, value: web3js.utils.toWei("0.0001")})
         .on('receipt', async () =>{
             balanceOfOwner = await nftsContract.methods.balanceOf(userAccount).call({from: userAccount});
             let nftId = await nftsContract.methods.tokenOfOwnerByIndex(userAccount, balanceOfOwner - 1).call({from: userAccount});
@@ -73,7 +73,7 @@ addEventListener('load', async function() {
             document.querySelector("#img").setAttribute("src", metadata["image"]);
             document.querySelector("#nft-dna").innerHTML = dna;
             document.querySelector("#nft-rareness").innerHTML = rareness[dna[0]];
-            document.querySelector("#nft-stars").innerHTML = parseInt(dna[2]) + 1;
+            document.querySelector("#nft-stars").innerHTML = parseInt(dna[2]);
             document.querySelector("#nft-type").innerHTML = types[dna[1]];
         })
         .on('error', () => {
@@ -81,8 +81,26 @@ addEventListener('load', async function() {
         });
     });
 
+    document.querySelector("#btn-last").addEventListener('click', async () => {
+        
+        balanceOfOwner = await nftsContract.methods.balanceOf(userAccount).call({from: userAccount});
+        let nftId = await nftsContract.methods.tokenOfOwnerByIndex(userAccount, balanceOfOwner - 1).call({from: userAccount});
+        let uri = await nftsContract.methods.tokenURI(nftId).call({from: userAccount});
+        let dna = await nftsContract.methods.getTokenDna(nftId).call({from: userAccount});
+        console.log(dna);
+        await fetch(uri).then(async response => {
+            metadata = await response.json();
+        });
+
+        document.querySelector("#img").setAttribute("src", metadata["image"]);
+        document.querySelector("#nft-dna").innerHTML = dna;
+        document.querySelector("#nft-rareness").innerHTML = rareness[dna[0]];
+        document.querySelector("#nft-stars").innerHTML = parseInt(dna[2]);
+        document.querySelector("#nft-type").innerHTML = types[dna[1]];
+    });
+
     document.querySelector("#btn-mint-rare").addEventListener('click', async () => {
-        await nftsDelegatorContract.methods.mintEpic().send({from: userAccount, value: web3js.utils.toWei("0.005")})
+        await nftsDelegatorContract.methods.mintEpic().send({from: userAccount, value: web3js.utils.toWei("0.0001")})
         .on('receipt', async () =>{
             balanceOfOwner = await nftsContract.methods.balanceOf(userAccount).call({from: userAccount});
             let nftId = await nftsContract.methods.tokenOfOwnerByIndex(userAccount, balanceOfOwner - 1).call({from: userAccount});
@@ -96,7 +114,7 @@ addEventListener('load', async function() {
             document.querySelector("#img").setAttribute("src", metadata["image"]);
             document.querySelector("#nft-dna").innerHTML = dna;
             document.querySelector("#nft-rareness").innerHTML = rareness[dna[0]];
-            document.querySelector("#nft-stars").innerHTML = parseInt(dna[2]) + 1;
+            document.querySelector("#nft-stars").innerHTML = parseInt(dna[2]);
             document.querySelector("#nft-type").innerHTML = types[dna[1]];
         })
         .on('error', () => {
@@ -105,7 +123,7 @@ addEventListener('load', async function() {
     });
 
     document.querySelector("#btn-mint-legendary").addEventListener('click', async () => {
-        await nftsDelegatorContract.methods.mintMithic().send({from: userAccount, value: web3js.utils.toWei("0.01")})
+        await nftsDelegatorContract.methods.mintMithic().send({from: userAccount, value: web3js.utils.toWei("0.0001")})
         .on('receipt', async () =>{
             balanceOfOwner = await nftsContract.methods.balanceOf(userAccount).call({from: userAccount});
             let nftId = await nftsContract.methods.tokenOfOwnerByIndex(userAccount, balanceOfOwner - 1).call({from: userAccount});
@@ -119,7 +137,7 @@ addEventListener('load', async function() {
             document.querySelector("#img").setAttribute("src", metadata["image"]);
             document.querySelector("#nft-dna").innerHTML = dna;
             document.querySelector("#nft-rareness").innerHTML = rareness[dna[0]];
-            document.querySelector("#nft-stars").innerHTML = parseInt(dna[2]) + 1;
+            document.querySelector("#nft-stars").innerHTML = parseInt(dna[2]);
             document.querySelector("#nft-type").innerHTML = types[dna[1]];
         })
         .on('error', () => {

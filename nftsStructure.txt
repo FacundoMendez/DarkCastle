@@ -1,0 +1,6 @@
+// Heroes Nft DNA Structure:
+
+DNA[0]: Rareness // ["Obsidian", "Emerald", "Ruby", "Diamond"]
+DNA[1]: Type // ["Reaper", "Warrior", "Sourcerer"]
+DNA[2]: Stars // [1, 2, 3]
+DNA[3]: Rareness Value
