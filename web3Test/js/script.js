@@ -1,8 +1,13 @@
 import nftsAbi from "../abis/NftsAbi.js";
 import nftsDelegatorAbi from "../abis/NftsDelegatorAbi.js";
 
-const nftsContractAddress = "0x6529DA150874EaCD74085cf1a947C58c0a6fAB31";
-const nftsDelegatorContractAddress = "0x6Eb8612Be4A0132177917E58156D1b7afFE04Eea";
+const nftsContractAddress = "0x9a41E48dE6689Ea7fE39f631CaD1dAf4d4B17403";
+const nftsDelegatorContractAddress = "0x568643c9e4c9617f4ceCfdFC3AE6d239495312dD";
+
+// Nfts Rinkeby: 0x9a41E48dE6689Ea7fE39f631CaD1dAf4d4B17403
+// Nfts Mumbai: 0x0dEEc9C69286F2a0da237bdb8db20FE846a1c9cb
+
+// Nfts Delegator Rinkeby: 0x568643c9e4c9617f4ceCfdFC3AE6d239495312dD
 
 let nftsContract;
 let nftsDelegatorContract;
