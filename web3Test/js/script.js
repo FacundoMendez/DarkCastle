@@ -1,13 +1,10 @@
 import nftsAbi from "../abis/NftsAbi.js";
 import nftsDelegatorAbi from "../abis/NftsDelegatorAbi.js";
 
-const nftsContractAddress = "0x9a41E48dE6689Ea7fE39f631CaD1dAf4d4B17403";
-const nftsDelegatorContractAddress = "0x568643c9e4c9617f4ceCfdFC3AE6d239495312dD";
-
-// Nfts Rinkeby: 0x9a41E48dE6689Ea7fE39f631CaD1dAf4d4B17403
-// Nfts Mumbai: 0x0dEEc9C69286F2a0da237bdb8db20FE846a1c9cb
-
-// Nfts Delegator Rinkeby: 0x568643c9e4c9617f4ceCfdFC3AE6d239495312dD
+const nftsContractAddress = {"4": "0xf0D5DD5B16785c50F6aFba0d7f3c70050545b2a7", "69": "0xDfA408532B3c9D59a2d9e9aafBDd69D0855DDB94"};
+const nftsDelegatorContractAddress = {"4": "0x9b3d516Bb02B7204D298cb494686CA1dB5A4742E", "69": "0x05A2e4FD4CccCC377683f68187fB45b9b2FA1bCC"};
+const chainNames = {"4": "Rinkeby", "69": "Optimism(Kovan)"}
+const endpointIds = {"4": 10001, "69": 10011}
 
 let nftsContract;
 let nftsDelegatorContract;
@@ -27,15 +24,27 @@ addEventListener('load', async function() {
     if (typeof web3 !== 'undefined') {
         web3js = new Web3(window.ethereum);
   
-        nftsContract = new web3js.eth.Contract(nftsAbi, nftsContractAddress);
-        nftsDelegatorContract = new web3js.eth.Contract(nftsDelegatorAbi, nftsDelegatorContractAddress);
+        await web3js.eth.net.getId().then(async res => {
+            console.log(res);
 
-        await ethereum.request({ method: 'eth_requestAccounts' })
-        .then(function(result) {
-            userAccount = result[0];
-            console.log(userAccount);
+            // Check if Chain is Supported
+            if(res in nftsContractAddress) {
+
+                nftsContract = new web3js.eth.Contract(nftsAbi, nftsContractAddress[res]);
+                nftsDelegatorContract = new web3js.eth.Contract(nftsDelegatorAbi, nftsDelegatorContractAddress[res]);
+
+                await ethereum.request({ method: 'eth_requestAccounts' })
+                .then(function(result) {
+                    userAccount = result[0];
+                    console.log(userAccount);
+                });
+
+            } else {
+                console.log("unsupported chain.")
+            }
+
         });
-   
+        
     } else {
         errorAlert("Please Install Metamask.");
     }
@@ -57,9 +66,6 @@ addEventListener('load', async function() {
             document.querySelector("#nft-rareness").innerHTML = rareness[dna[0]];
             document.querySelector("#nft-stars").innerHTML = parseInt(dna[2]);
             document.querySelector("#nft-type").innerHTML = types[dna[1]];
-        })
-        .on('error', () => {
-            alert("Error");
         });
     });
     
@@ -80,9 +86,6 @@ addEventListener('load', async function() {
             document.querySelector("#nft-rareness").innerHTML = rareness[dna[0]];
             document.querySelector("#nft-stars").innerHTML = parseInt(dna[2]);
             document.querySelector("#nft-type").innerHTML = types[dna[1]];
-        })
-        .on('error', () => {
-            alert("Error");
         });
     });
 
@@ -95,6 +98,7 @@ addEventListener('load', async function() {
         console.log(dna);
         await fetch(uri).then(async response => {
             metadata = await response.json();
+            console.log(metadata);
         });
 
         document.querySelector("#img").setAttribute("src", metadata["image"]);
@@ -121,9 +125,6 @@ addEventListener('load', async function() {
             document.querySelector("#nft-rareness").innerHTML = rareness[dna[0]];
             document.querySelector("#nft-stars").innerHTML = parseInt(dna[2]);
             document.querySelector("#nft-type").innerHTML = types[dna[1]];
-        })
-        .on('error', () => {
-            alert("Error");
         });
     });
 
@@ -144,10 +145,40 @@ addEventListener('load', async function() {
             document.querySelector("#nft-rareness").innerHTML = rareness[dna[0]];
             document.querySelector("#nft-stars").innerHTML = parseInt(dna[2]);
             document.querySelector("#nft-type").innerHTML = types[dna[1]];
-        })
-        .on('error', () => {
-            alert("Error");
-        });
+        }); 
+    });
+
+    document.querySelector("#btn-traverse").addEventListener('click', async () => {
+
+        let nftId = document.querySelector("#nftId").value;
+        let chainId = document.querySelector("#chainId").value;
+
+        if(chainId in endpointIds) {
+
+            await nftsContract.methods.traverseChains(endpointIds[chainId], nftId).send({from: userAccount, value: web3js.utils.toWei("0.1")})
+            .on('receipt', () => {
+                alert("Traversed Succesful. Please wait some minutes for the transaction to be reflected in the other chain.");
+            });
+
+        } else {
+            alert("Unsupported chainId.")
+        }
+
     });
     
+});
+
+// Check Metamask Account Change
+window.ethereum.on('accountsChanged', function (accounts) {
+
+    window.location.reload();
+
+});
+  
+  
+// Check Metamask Network Change
+ethereum.on('chainChanged', (chainId) => {
+
+    window.location.reload();
+
 });

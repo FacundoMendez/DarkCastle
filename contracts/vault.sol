@@ -56,7 +56,7 @@ contract DarkCastleVault {
         require(__delegatedAddress != address(0) && __delegatedAddress != _delegatedAccess, "Invalid Address");
         
         _delegatedAccess = __delegatedAddress;
-        emit newDelegatedAddress(__delegatedAccess);
+        emit newDelegatedAddress(__delegatedAddress);
     }
 
 

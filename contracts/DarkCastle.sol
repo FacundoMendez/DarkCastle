@@ -5,6 +5,7 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "@openzeppelin/contracts/utils/math/SafeMath.sol";
 import "./Vault.sol";
 import "./Lands.sol";
+import "./Nfts.sol";
 
 contract DarkCastle {
     using SafeMath for uint;
@@ -50,6 +51,7 @@ contract DarkCastle {
     // Events
     event newBaseWinChances(uint[]);
     event newBaseRewardsMul(uint[]);
+    event newBaseLandsWinMul(uint[]);
     event newLandsRarityCapacity(uint[]);
     event newBaseRewards(uint);
     event newAffinityChange(uint);
@@ -117,7 +119,7 @@ contract DarkCastle {
     }
 
     function setGameVaultContract(address _newVault) public onlyOwner {
-        _vault = DarkCastleVault(_newVault);
+        _vault = DarkCastleVault(payable(_newVault));
 
         emit newGameVault(_newVault);
     }
@@ -135,7 +137,7 @@ contract DarkCastle {
     }
 
     function setGameNftsContracts(address _newGameNfts) public onlyOwner {
-        _nfts = _newGameNfts;
+        _nfts = DarkCastleNfts(_newGameNfts);
 
         emit newGameNfts(_newGameNfts);
     }
@@ -168,9 +170,9 @@ contract DarkCastle {
     // Game Functions
     function getDailyEnemies() public view returns(uint[] memory) {
         uint[] memory _enemies = new uint[](3);
-        uint _enemies[0] = uint(keccak256(abi.encodePacked( block.timestamp.sub(block.timestamp % 1 days).div(1 days), msg.sender ))) % _enemiesAmount;
-        uint _enemies[1] = uint(keccak256(abi.encodePacked( block.timestamp.sub(block.timestamp % 1 days).div(1 days), msg.sender, _enemieOne, _owner ))) % _enemiesAmount;
-        uint _enemies[2] = uint(keccak256(abi.encodePacked( block.timestamp.sub(block.timestamp % 1 days).div(1 days), msg.sender, _enemieOne, _enemieTwo, _owner, address(_gameCurrency), address(_vault)))) % _enemiesAmount;
+        _enemies[0] = uint(keccak256(abi.encodePacked( block.timestamp.sub(block.timestamp % 1 days).div(1 days), msg.sender ))) % _enemiesAmount;
+        _enemies[1] = uint(keccak256(abi.encodePacked( block.timestamp.sub(block.timestamp % 1 days).div(1 days), msg.sender, _enemies[0], _owner ))) % _enemiesAmount;
+        _enemies[2] = uint(keccak256(abi.encodePacked( block.timestamp.sub(block.timestamp % 1 days).div(1 days), msg.sender, _enemies[0], _enemies[1], _owner, address(_gameCurrency), address(_vault)))) % _enemiesAmount;
 
         return(_enemies);
     }
@@ -185,7 +187,7 @@ contract DarkCastle {
 
         if (landEquiped[msg.sender]) {
             landEquiped[msg.sender] = false;
-            _lands.transfer(msg.sender, addressLand[msg.sender]);
+            _lands.transferFrom(address(this), msg.sender, addressLand[msg.sender]);
         }
 
         _lands.transferFrom(msg.sender, address(this), _landId);
@@ -197,37 +199,41 @@ contract DarkCastle {
         require(landEquiped[msg.sender], "No land equiped");
 
         landEquiped[msg.sender] = false;
-        _lands.transfer(msg.sender, addressLand[msg.sender]);
+        _lands.transferFrom(address(this), msg.sender, addressLand[msg.sender]);
     }
 
     function _getWinchance(uint[] memory nftIds, uint _boss) internal view returns (uint) {
         uint _winChance = _baseWinChances[_boss] + _baseLandsWinMul[_lands.getTokenDna(addressLand[msg.sender])[0]];
         uint _bosses = getDailyEnemies()[_boss];
 
-        for (uint i = 0; i < nftIds.length) {
-            _baseWinChance += _baseStarsWinMul[_nfts.getTokenDna(addressLand[msg.sender])[2]];
+        for (uint i = 0; i < nftIds.length; i++) {
+            _winChance += _baseStarsWinMul[_nfts.getTokenDna(addressLand[msg.sender])[2]];
         
             if(_nfts.getTokenDna(addressLand[msg.sender])[1] - 1 == _bosses) {
-                _baseWinChance += _affinityWinChance;
+                _winChance += _affinityWinChance;
             } else if (_nfts.getTokenDna(addressLand[msg.sender])[1] + 1 == _bosses) {
-                _baseWinChance -= _affinityWinChance;
+                _winChance -= _affinityWinChance;
             }
         }    
+
+        return _winChance;
     }
 
     function fight(uint _boss, uint[] memory nftIds) public  onlyOwnerOfNfts(nftIds) {
         require(nftIds.length > 0, "No nfts Specified");
-        require(_boss < _enemiesCount, "Invalid Boss");
+        require(_boss < _enemiesAmount, "Invalid Boss");
         require(lastFight[msg.sender] < (block.timestamp - block.timestamp % 1 days) / 1 days, "Only once a day");
 
-        _enemies = getDailyEnemies();
-        _selectedEnemie = _enemies[_boss];
-        _winchance = getWinchance(nftIds, _boss);
+        uint[] memory _enemies = getDailyEnemies();
+        uint _selectedEnemie = _enemies[_boss];
+        uint _winchance = _getWinchance(nftIds, _boss);
 
-        if(uint(keccak256(abi.encodePacked(block.timestamp,block.difficulty, msg.sender, _enemiesCount, accumulatedBalance[msg.sender], lastWithdrawal[msg.sender], addressLand[msg.sender], lastFight[msg.sender]))) % 100 < _winchance) {
-            P
+        if(uint(keccak256(abi.encodePacked(block.timestamp,block.difficulty, msg.sender, _enemiesAmount, accumulatedBalance[msg.sender], lastWithdrawal[msg.sender], addressLand[msg.sender], lastFight[msg.sender]))) % 100 < _winchance) {
+            // Win
+            _enemies = _enemies;
         } else {
             // Lose
+            _enemies = _enemies;
         }
 
     }
@@ -236,11 +242,11 @@ contract DarkCastle {
     // Economy Functions
     function withdrawUserBalance() public {
         require(accumulatedBalance[msg.sender] > 0, "No Balance to Withdraw");
-        require(accumulatedBalance[msg.sender] <= _vault.maxTxAmount, "Surpases the Max Tx Amount");
+        require(accumulatedBalance[msg.sender] <= _vault.maxTxAmount(), "Surpases the Max Tx Amount");
         require(_gameCurrency.balanceOf(address(_vault)) >= accumulatedBalance[msg.sender], "Not enough tokens in vault");
 
-        uint _fee = lastWithdrawal[msg.sender].add(10 days) < block.timestamp ? 0 : (block.timestamp.sub(lastWithdrawal).sub((block.timestamp - lastWithdrawal) % 1 days).div(1 days).mul(_earlyWithdrawDailyFee);
-        uint _totalAmount = accumulatedBalance[msg.sender].mul(100.sub(_fee)).div(100);
+        uint _fee = lastWithdrawal[msg.sender].add(10 days) < block.timestamp ? 0 : (block.timestamp.sub(lastWithdrawal[msg.sender]).sub((block.timestamp - lastWithdrawal[msg.sender]) % 1 days).div(1 days).mul(_earlyWithdrawDailyFee));
+        uint _totalAmount = accumulatedBalance[msg.sender].mul(100 - _fee).div(100);
 
         _vault.requestFunds(_totalAmount, msg.sender);
         emit withdrawnBalance(_totalAmount, msg.sender);
@@ -262,7 +268,7 @@ contract DarkCastle {
     }
 
     modifier onlyOwnerOfNfts(uint[] memory _nftIds) {
-        for(uint i = 0; i<_nftIds.length: i++) {
+        for(uint i = 0; i<_nftIds.length; i++) {
             require(_nfts.ownerOf(_nftIds[i]) == msg.sender, "Not the owner of the nfts");
         }
 

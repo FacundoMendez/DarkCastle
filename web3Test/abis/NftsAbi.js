@@ -1,6 +1,12 @@
 const nftsAbi = [
 	{
-		"inputs": [],
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_layerZeroEndpoint",
+				"type": "address"
+			}
+		],
 		"stateMutability": "nonpayable",
 		"type": "constructor"
 	},
@@ -52,6 +58,56 @@ const nftsAbi = [
 			}
 		],
 		"name": "ApprovalForAll",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "uint16",
+				"name": "_srcChainId",
+				"type": "uint16"
+			},
+			{
+				"indexed": false,
+				"internalType": "bytes",
+				"name": "_srcAddress",
+				"type": "bytes"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint64",
+				"name": "_nonce",
+				"type": "uint64"
+			},
+			{
+				"indexed": false,
+				"internalType": "bytes",
+				"name": "_payload",
+				"type": "bytes"
+			}
+		],
+		"name": "MessageFailed",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "previousOwner",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "newOwner",
+				"type": "address"
+			}
+		],
+		"name": "OwnershipTransferred",
 		"type": "event"
 	},
 	{
@@ -169,6 +225,47 @@ const nftsAbi = [
 		"type": "function"
 	},
 	{
+		"inputs": [],
+		"name": "donate",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint16",
+				"name": "",
+				"type": "uint16"
+			},
+			{
+				"internalType": "bytes",
+				"name": "",
+				"type": "bytes"
+			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "failedMessages",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "payloadLength",
+				"type": "uint256"
+			},
+			{
+				"internalType": "bytes32",
+				"name": "payloadHash",
+				"type": "bytes32"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
 		"inputs": [
 			{
 				"internalType": "uint256",
@@ -233,9 +330,42 @@ const nftsAbi = [
 	{
 		"inputs": [
 			{
+				"internalType": "uint16",
+				"name": "_srcChainId",
+				"type": "uint16"
+			},
+			{
+				"internalType": "bytes",
+				"name": "_srcAddress",
+				"type": "bytes"
+			},
+			{
+				"internalType": "uint64",
+				"name": "_nonce",
+				"type": "uint64"
+			},
+			{
+				"internalType": "bytes",
+				"name": "_payload",
+				"type": "bytes"
+			}
+		],
+		"name": "lzReceive",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
 				"internalType": "uint256[]",
 				"name": "_nftDna",
 				"type": "uint256[]"
+			},
+			{
+				"internalType": "address",
+				"name": "_minter",
+				"type": "address"
 			}
 		],
 		"name": "mint",
@@ -266,6 +396,71 @@ const nftsAbi = [
 		"inputs": [
 			{
 				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "nftDna",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint16",
+				"name": "_srcChainId",
+				"type": "uint16"
+			},
+			{
+				"internalType": "bytes",
+				"name": "_srcAddress",
+				"type": "bytes"
+			},
+			{
+				"internalType": "uint64",
+				"name": "_nonce",
+				"type": "uint64"
+			},
+			{
+				"internalType": "bytes",
+				"name": "_payload",
+				"type": "bytes"
+			}
+		],
+		"name": "onLzReceive",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "owner",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
 				"name": "tokenId",
 				"type": "uint256"
 			}
@@ -279,6 +474,41 @@ const nftsAbi = [
 			}
 		],
 		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "renounceOwnership",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint16",
+				"name": "_srcChainId",
+				"type": "uint16"
+			},
+			{
+				"internalType": "bytes",
+				"name": "_srcAddress",
+				"type": "bytes"
+			},
+			{
+				"internalType": "uint64",
+				"name": "_nonce",
+				"type": "uint64"
+			},
+			{
+				"internalType": "bytes",
+				"name": "_payload",
+				"type": "bytes"
+			}
+		],
+		"name": "retryMessage",
+		"outputs": [],
+		"stateMutability": "payable",
 		"type": "function"
 	},
 	{
@@ -372,6 +602,24 @@ const nftsAbi = [
 			}
 		],
 		"name": "setDelegatedMinter",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint16",
+				"name": "_chainId",
+				"type": "uint16"
+			},
+			{
+				"internalType": "bytes",
+				"name": "_trustedRemote",
+				"type": "bytes"
+			}
+		],
+		"name": "setTrustedRemote",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -502,6 +750,63 @@ const nftsAbi = [
 			}
 		],
 		"name": "transferFrom",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "newOwner",
+				"type": "address"
+			}
+		],
+		"name": "transferOwnership",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint16",
+				"name": "_chainId",
+				"type": "uint16"
+			},
+			{
+				"internalType": "uint256",
+				"name": "tokenId",
+				"type": "uint256"
+			}
+		],
+		"name": "traverseChains",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint16",
+				"name": "",
+				"type": "uint16"
+			}
+		],
+		"name": "trustedRemoteLookup",
+		"outputs": [
+			{
+				"internalType": "bytes",
+				"name": "",
+				"type": "bytes"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "withdraw",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"

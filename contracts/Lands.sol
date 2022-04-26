@@ -39,13 +39,13 @@ contract DarkCastleLands is ERC721Enumerable {
     }
 
 
-    function mint(uint[] memory _nftDna) onlyDelegated external returns(uint) {
+    function mint(uint[] memory _nftDna, address _minter) onlyDelegated external returns(uint) {
 
         uint _nftId = nftsCount;
         nftDna[_nftId] = _nftDna;
         nftsCount ++;
 
-        super._mint(msg.sender, _nftId);
+        super._mint(_minter, _nftId);
 
         return(_nftId);
 

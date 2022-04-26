@@ -21,7 +21,7 @@ contract DarkCastleToken is ERC20 {
 
     // Owmers Vesting
     address private _owner;
-    uint8 private _vestingDuration;
+    uint private _vestingDuration;
     uint private _periodVestingAmount;
     uint8 private _vestingCount;
     uint private _lastVestingClaim;
@@ -70,7 +70,7 @@ contract DarkCastleToken is ERC20 {
         _mint(_advisorsTokensAddress, _totalSupply.mul(24).div(1000));
 
 
-        _vestingDuration = __vestingDuration;
+        _vestingDuration = uint(__vestingDuration);
         _periodVestingAmount = _totalSupply.mul(25).div(1000).div(_vestingDuration);
         _vestingCount = 0;
         _lastVestingClaim = block.timestamp;
